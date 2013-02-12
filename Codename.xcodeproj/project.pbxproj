@@ -20,6 +20,7 @@
 		D3DE4C5C16C9C5D400F9D593 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DE4C5B16C9C5D400F9D593 /* ViewController.m */; };
 		D3DE4C6416C9C65900F9D593 /* Like.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DE4C6316C9C65900F9D593 /* Like.m */; };
 		D3DE4C6816C9C6A100F9D593 /* UserFeedback.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DE4C6716C9C6A100F9D593 /* UserFeedback.m */; };
+		D3DE4C6B16C9C9E000F9D593 /* LiveAudioStream.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DE4C6A16C9C9E000F9D593 /* LiveAudioStream.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,8 @@
 		D3DE4C6316C9C65900F9D593 /* Like.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Like.m; sourceTree = "<group>"; };
 		D3DE4C6616C9C6A100F9D593 /* UserFeedback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserFeedback.h; path = Model/UserFeedback.h; sourceTree = "<group>"; };
 		D3DE4C6716C9C6A100F9D593 /* UserFeedback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserFeedback.m; path = Model/UserFeedback.m; sourceTree = "<group>"; };
+		D3DE4C6916C9C9E000F9D593 /* LiveAudioStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LiveAudioStream.h; path = Model/LiveAudioStream.h; sourceTree = "<group>"; };
+		D3DE4C6A16C9C9E000F9D593 /* LiveAudioStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LiveAudioStream.m; path = Model/LiveAudioStream.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +121,8 @@
 			isa = PBXGroup;
 			children = (
 				D3DE4C6616C9C6A100F9D593 /* UserFeedback.h */,
+				D3DE4C6916C9C9E000F9D593 /* LiveAudioStream.h */,
+				D3DE4C6A16C9C9E000F9D593 /* LiveAudioStream.m */,
 				D3DE4C6716C9C6A100F9D593 /* UserFeedback.m */,
 				D3DE4C6216C9C65900F9D593 /* Like.h */,
 				D3DE4C6316C9C65900F9D593 /* Like.m */,
@@ -197,6 +202,7 @@
 				D3DE4C5C16C9C5D400F9D593 /* ViewController.m in Sources */,
 				D3DE4C6416C9C65900F9D593 /* Like.m in Sources */,
 				D3DE4C6816C9C6A100F9D593 /* UserFeedback.m in Sources */,
+				D3DE4C6B16C9C9E000F9D593 /* LiveAudioStream.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
