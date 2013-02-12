@@ -18,6 +18,7 @@
 		D3DE4C5616C9C5D400F9D593 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3DE4C5516C9C5D400F9D593 /* Default-568h@2x.png */; };
 		D3DE4C5916C9C5D400F9D593 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3DE4C5716C9C5D400F9D593 /* MainStoryboard.storyboard */; };
 		D3DE4C5C16C9C5D400F9D593 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DE4C5B16C9C5D400F9D593 /* ViewController.m */; };
+		D3DE4C6416C9C65900F9D593 /* Like.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DE4C6316C9C65900F9D593 /* Like.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,8 @@
 		D3DE4C5816C9C5D400F9D593 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		D3DE4C5A16C9C5D400F9D593 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		D3DE4C5B16C9C5D400F9D593 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D3DE4C6216C9C65900F9D593 /* Like.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Like.h; sourceTree = "<group>"; };
+		D3DE4C6316C9C65900F9D593 /* Like.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Like.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,7 @@
 		D3DE4C4516C9C5D400F9D593 /* Codename */ = {
 			isa = PBXGroup;
 			children = (
+				D3DE4C6516C9C66300F9D593 /* Model */,
 				D3DE4C4E16C9C5D400F9D593 /* AppDelegate.h */,
 				D3DE4C4F16C9C5D400F9D593 /* AppDelegate.m */,
 				D3DE4C5716C9C5D400F9D593 /* MainStoryboard.storyboard */,
@@ -105,6 +109,16 @@
 				D3DE4C5516C9C5D400F9D593 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D3DE4C6516C9C66300F9D593 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D3DE4C6216C9C65900F9D593 /* Like.h */,
+				D3DE4C6316C9C65900F9D593 /* Like.m */,
+			);
+			name = Model;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +190,7 @@
 				D3DE4C4C16C9C5D400F9D593 /* main.m in Sources */,
 				D3DE4C5016C9C5D400F9D593 /* AppDelegate.m in Sources */,
 				D3DE4C5C16C9C5D400F9D593 /* ViewController.m in Sources */,
+				D3DE4C6416C9C65900F9D593 /* Like.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
