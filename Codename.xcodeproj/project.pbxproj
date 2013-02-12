@@ -20,6 +20,7 @@
 		D3DE4C5C16C9C5D400F9D593 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DE4C5B16C9C5D400F9D593 /* ViewController.m */; };
 		D3DE4C6816C9C6A100F9D593 /* UserFeedback.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DE4C6716C9C6A100F9D593 /* UserFeedback.m */; };
 		D3DE4C6B16C9C9E000F9D593 /* LiveAudioStream.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DE4C6A16C9C9E000F9D593 /* LiveAudioStream.m */; };
+		D3DE4C6E16C9CAC700F9D593 /* NowPlayingData.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DE4C6D16C9CAC700F9D593 /* NowPlayingData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,8 @@
 		D3DE4C6716C9C6A100F9D593 /* UserFeedback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserFeedback.m; path = Model/UserFeedback.m; sourceTree = "<group>"; };
 		D3DE4C6916C9C9E000F9D593 /* LiveAudioStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LiveAudioStream.h; path = Model/LiveAudioStream.h; sourceTree = "<group>"; };
 		D3DE4C6A16C9C9E000F9D593 /* LiveAudioStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LiveAudioStream.m; path = Model/LiveAudioStream.m; sourceTree = "<group>"; };
+		D3DE4C6C16C9CAC700F9D593 /* NowPlayingData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NowPlayingData.h; path = Model/NowPlayingData.h; sourceTree = "<group>"; };
+		D3DE4C6D16C9CAC700F9D593 /* NowPlayingData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NowPlayingData.m; path = Model/NowPlayingData.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,8 @@
 		D3DE4C6516C9C66300F9D593 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D3DE4C6C16C9CAC700F9D593 /* NowPlayingData.h */,
+				D3DE4C6D16C9CAC700F9D593 /* NowPlayingData.m */,
 				D3DE4C6616C9C6A100F9D593 /* UserFeedback.h */,
 				D3DE4C6916C9C9E000F9D593 /* LiveAudioStream.h */,
 				D3DE4C6A16C9C9E000F9D593 /* LiveAudioStream.m */,
@@ -197,6 +202,7 @@
 				D3DE4C5C16C9C5D400F9D593 /* ViewController.m in Sources */,
 				D3DE4C6816C9C6A100F9D593 /* UserFeedback.m in Sources */,
 				D3DE4C6B16C9C9E000F9D593 /* LiveAudioStream.m in Sources */,
+				D3DE4C6E16C9CAC700F9D593 /* NowPlayingData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
