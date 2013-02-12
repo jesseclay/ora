@@ -123,9 +123,9 @@
 				D3DE4C6C16C9CAC700F9D593 /* NowPlayingData.h */,
 				D3DE4C6D16C9CAC700F9D593 /* NowPlayingData.m */,
 				D3DE4C6616C9C6A100F9D593 /* UserFeedback.h */,
+				D3DE4C6716C9C6A100F9D593 /* UserFeedback.m */,
 				D3DE4C6916C9C9E000F9D593 /* LiveAudioStream.h */,
 				D3DE4C6A16C9C9E000F9D593 /* LiveAudioStream.m */,
-				D3DE4C6716C9C6A100F9D593 /* UserFeedback.m */,
 			);
 			name = Model;
 			path = ..;
