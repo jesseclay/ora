@@ -24,14 +24,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D3DE4C3C16C9C5D400F9D593 /* Codename.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Codename.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3DE4C3C16C9C5D400F9D593 /* ORA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ORA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3DE4C3F16C9C5D400F9D593 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D3DE4C4116C9C5D400F9D593 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D3DE4C4316C9C5D400F9D593 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		D3DE4C4716C9C5D400F9D593 /* Codename-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Codename-Info.plist"; sourceTree = "<group>"; };
+		D3DE4C4716C9C5D400F9D593 /* ORA-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ORA-Info.plist"; sourceTree = "<group>"; };
 		D3DE4C4916C9C5D400F9D593 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D3DE4C4B16C9C5D400F9D593 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D3DE4C4D16C9C5D400F9D593 /* Codename-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Codename-Prefix.pch"; sourceTree = "<group>"; };
+		D3DE4C4D16C9C5D400F9D593 /* ORA-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ORA-Prefix.pch"; sourceTree = "<group>"; };
 		D3DE4C4E16C9C5D400F9D593 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D3DE4C4F16C9C5D400F9D593 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D3DE4C5116C9C5D400F9D593 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -65,7 +65,7 @@
 		D3DE4C3316C9C5D400F9D593 = {
 			isa = PBXGroup;
 			children = (
-				D3DE4C4516C9C5D400F9D593 /* Codename */,
+				D3DE4C4516C9C5D400F9D593 /* ORA */,
 				D3DE4C3E16C9C5D400F9D593 /* Frameworks */,
 				D3DE4C3D16C9C5D400F9D593 /* Products */,
 			);
@@ -74,7 +74,7 @@
 		D3DE4C3D16C9C5D400F9D593 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D3DE4C3C16C9C5D400F9D593 /* Codename.app */,
+				D3DE4C3C16C9C5D400F9D593 /* ORA.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -89,7 +89,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D3DE4C4516C9C5D400F9D593 /* Codename */ = {
+		D3DE4C4516C9C5D400F9D593 /* ORA */ = {
 			isa = PBXGroup;
 			children = (
 				D3DE4C6516C9C66300F9D593 /* Model */,
@@ -100,16 +100,17 @@
 				D3DE4C5B16C9C5D400F9D593 /* ViewController.m */,
 				D3DE4C4616C9C5D400F9D593 /* Supporting Files */,
 			);
+			name = ORA;
 			path = Codename;
 			sourceTree = "<group>";
 		};
 		D3DE4C4616C9C5D400F9D593 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				D3DE4C4716C9C5D400F9D593 /* Codename-Info.plist */,
+				D3DE4C4716C9C5D400F9D593 /* ORA-Info.plist */,
 				D3DE4C4816C9C5D400F9D593 /* InfoPlist.strings */,
 				D3DE4C4B16C9C5D400F9D593 /* main.m */,
-				D3DE4C4D16C9C5D400F9D593 /* Codename-Prefix.pch */,
+				D3DE4C4D16C9C5D400F9D593 /* ORA-Prefix.pch */,
 				D3DE4C5116C9C5D400F9D593 /* Default.png */,
 				D3DE4C5316C9C5D400F9D593 /* Default@2x.png */,
 				D3DE4C5516C9C5D400F9D593 /* Default-568h@2x.png */,
@@ -134,9 +135,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D3DE4C3B16C9C5D400F9D593 /* Codename */ = {
+		D3DE4C3B16C9C5D400F9D593 /* ORA */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D3DE4C5F16C9C5D400F9D593 /* Build configuration list for PBXNativeTarget "Codename" */;
+			buildConfigurationList = D3DE4C5F16C9C5D400F9D593 /* Build configuration list for PBXNativeTarget "ORA" */;
 			buildPhases = (
 				D3DE4C3816C9C5D400F9D593 /* Sources */,
 				D3DE4C3916C9C5D400F9D593 /* Frameworks */,
@@ -146,9 +147,9 @@
 			);
 			dependencies = (
 			);
-			name = Codename;
+			name = ORA;
 			productName = Codename;
-			productReference = D3DE4C3C16C9C5D400F9D593 /* Codename.app */;
+			productReference = D3DE4C3C16C9C5D400F9D593 /* ORA.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -160,7 +161,7 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = CS193p;
 			};
-			buildConfigurationList = D3DE4C3716C9C5D400F9D593 /* Build configuration list for PBXProject "Codename" */;
+			buildConfigurationList = D3DE4C3716C9C5D400F9D593 /* Build configuration list for PBXProject "ORA" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -172,7 +173,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D3DE4C3B16C9C5D400F9D593 /* Codename */,
+				D3DE4C3B16C9C5D400F9D593 /* ORA */,
 			);
 		};
 /* End PBXProject section */
@@ -288,9 +289,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Codename/Codename-Prefix.pch";
-				INFOPLIST_FILE = "Codename/Codename-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Codename/ORA-Prefix.pch";
+				INFOPLIST_FILE = "Codename/ORA-Info.plist";
+				PRODUCT_NAME = ORA;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -299,9 +300,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Codename/Codename-Prefix.pch";
-				INFOPLIST_FILE = "Codename/Codename-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Codename/ORA-Prefix.pch";
+				INFOPLIST_FILE = "Codename/ORA-Info.plist";
+				PRODUCT_NAME = ORA;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -309,7 +310,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D3DE4C3716C9C5D400F9D593 /* Build configuration list for PBXProject "Codename" */ = {
+		D3DE4C3716C9C5D400F9D593 /* Build configuration list for PBXProject "ORA" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D3DE4C5D16C9C5D400F9D593 /* Debug */,
@@ -318,13 +319,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D3DE4C5F16C9C5D400F9D593 /* Build configuration list for PBXNativeTarget "Codename" */ = {
+		D3DE4C5F16C9C5D400F9D593 /* Build configuration list for PBXNativeTarget "ORA" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D3DE4C6016C9C5D400F9D593 /* Debug */,
 				D3DE4C6116C9C5D400F9D593 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
