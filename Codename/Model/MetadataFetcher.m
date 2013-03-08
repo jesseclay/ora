@@ -8,6 +8,26 @@
 
 #import "MetadataFetcher.h"
 
+#define ENDPOINT_URL_STRING @"http://star947tt.com/sites/all/modules/csrds/csrds_now_playing.php"
+
 @implementation MetadataFetcher
 
+
+// communicates with server using HTTP; we receive JSON
++ (NSDictionary *)data
+{
+  NSData *jsonData = [[self class] jsonData];
+  NSError *error = nil;
+  NSDictionary *results = jsonData ? [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers|NSJSONReadingMutableLeaves error:&error] : nil;
+  return results;
+}
+
+#pragma mark private
++ (NSData *)jsonData
+{
+  NSData *jsonData = [[NSString stringWithContentsOfURL:[NSURL URLWithString:ENDPOINT_URL_STRING]
+                                               encoding:NSUTF8StringEncoding error:nil]
+                      dataUsingEncoding:NSUTF8StringEncoding];
+  return jsonData;
+}
 @end
