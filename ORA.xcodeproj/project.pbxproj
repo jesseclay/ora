@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D303CA8016D4591900E8EC61 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D303CA7F16D4591900E8EC61 /* AVFoundation.framework */; };
+		D303CA8416D45F0700E8EC61 /* NowPlayingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D303CA8316D45F0700E8EC61 /* NowPlayingViewController.m */; };
 		D3DE4C4016C9C5D400F9D593 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3DE4C3F16C9C5D400F9D593 /* UIKit.framework */; };
 		D3DE4C4216C9C5D400F9D593 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3DE4C4116C9C5D400F9D593 /* Foundation.framework */; };
 		D3DE4C4416C9C5D400F9D593 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3DE4C4316C9C5D400F9D593 /* CoreGraphics.framework */; };
@@ -24,6 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D303CA7F16D4591900E8EC61 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		D303CA8216D45F0700E8EC61 /* NowPlayingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NowPlayingViewController.h; path = Controller/NowPlayingViewController.h; sourceTree = "<group>"; };
+		D303CA8316D45F0700E8EC61 /* NowPlayingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NowPlayingViewController.m; path = Controller/NowPlayingViewController.m; sourceTree = "<group>"; };
 		D3DE4C3C16C9C5D400F9D593 /* ORA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ORA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3DE4C3F16C9C5D400F9D593 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D3DE4C4116C9C5D400F9D593 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -53,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D303CA8016D4591900E8EC61 /* AVFoundation.framework in Frameworks */,
 				D3DE4C4016C9C5D400F9D593 /* UIKit.framework in Frameworks */,
 				D3DE4C4216C9C5D400F9D593 /* Foundation.framework in Frameworks */,
 				D3DE4C4416C9C5D400F9D593 /* CoreGraphics.framework in Frameworks */,
@@ -62,6 +68,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D303CA8116D45ED900E8EC61 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D303CA8216D45F0700E8EC61 /* NowPlayingViewController.h */,
+				D303CA8316D45F0700E8EC61 /* NowPlayingViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		D3DE4C3316C9C5D400F9D593 = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +97,7 @@
 		D3DE4C3E16C9C5D400F9D593 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D303CA7F16D4591900E8EC61 /* AVFoundation.framework */,
 				D3DE4C3F16C9C5D400F9D593 /* UIKit.framework */,
 				D3DE4C4116C9C5D400F9D593 /* Foundation.framework */,
 				D3DE4C4316C9C5D400F9D593 /* CoreGraphics.framework */,
@@ -92,6 +108,7 @@
 		D3DE4C4516C9C5D400F9D593 /* ORA */ = {
 			isa = PBXGroup;
 			children = (
+				D303CA8116D45ED900E8EC61 /* Controller */,
 				D3DE4C6516C9C66300F9D593 /* Model */,
 				D3DE4C4E16C9C5D400F9D593 /* AppDelegate.h */,
 				D3DE4C4F16C9C5D400F9D593 /* AppDelegate.m */,
@@ -204,6 +221,7 @@
 				D3DE4C6816C9C6A100F9D593 /* UserFeedback.m in Sources */,
 				D3DE4C6B16C9C9E000F9D593 /* LiveAudioStream.m in Sources */,
 				D3DE4C6E16C9CAC700F9D593 /* NowPlayingData.m in Sources */,
+				D303CA8416D45F0700E8EC61 /* NowPlayingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
