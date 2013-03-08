@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2057" systemVersion="12C60" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+    <entity name="Metadata" representedClassName="Metadata" syncable="YES">
+        <attribute name="artiste" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="artURLStringLarge" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="artURLStringMedium" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="datetime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Metadata" positionX="160" positionY="192" width="128" height="135"/>
+    </elements>
 </model>
