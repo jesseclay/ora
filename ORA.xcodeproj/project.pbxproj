@@ -21,6 +21,7 @@
 		D3DE4C5916C9C5D400F9D593 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3DE4C5716C9C5D400F9D593 /* MainStoryboard.storyboard */; };
 		D3DE4C6B16C9C9E000F9D593 /* LiveAudioStream.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DE4C6A16C9C9E000F9D593 /* LiveAudioStream.m */; };
 		D3F7434316E9EFD6000A2197 /* MetadataFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F7434216E9EFD6000A2197 /* MetadataFetcher.m */; };
+		D3F802E316EA91D400A35F7F /* ORA.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D3F802E116EA91D400A35F7F /* ORA.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		D3DE4C6A16C9C9E000F9D593 /* LiveAudioStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LiveAudioStream.m; path = Model/LiveAudioStream.m; sourceTree = "<group>"; };
 		D3F7434116E9EFD6000A2197 /* MetadataFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MetadataFetcher.h; path = Codename/Model/MetadataFetcher.h; sourceTree = "<group>"; };
 		D3F7434216E9EFD6000A2197 /* MetadataFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MetadataFetcher.m; path = Codename/Model/MetadataFetcher.m; sourceTree = "<group>"; };
+		D3F802E216EA91D400A35F7F /* ORA.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ORA.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 		D3DE4C4516C9C5D400F9D593 /* ORA */ = {
 			isa = PBXGroup;
 			children = (
+				D3F802E416EA91DB00A35F7F /* CoreData */,
 				D303CA8116D45ED900E8EC61 /* Controller */,
 				D3DE4C6516C9C66300F9D593 /* Model */,
 				D3DE4C4E16C9C5D400F9D593 /* AppDelegate.h */,
@@ -137,6 +140,14 @@
 			);
 			name = Model;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		D3F802E416EA91DB00A35F7F /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				D3F802E116EA91D400A35F7F /* ORA.xcdatamodeld */,
+			);
+			name = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +221,7 @@
 				D3DE4C6B16C9C9E000F9D593 /* LiveAudioStream.m in Sources */,
 				D303CA8416D45F0700E8EC61 /* NowPlayingViewController.m in Sources */,
 				D3F7434316E9EFD6000A2197 /* MetadataFetcher.m in Sources */,
+				D3F802E316EA91D400A35F7F /* ORA.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +347,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D3F802E116EA91D400A35F7F /* ORA.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D3F802E216EA91D400A35F7F /* ORA.xcdatamodel */,
+			);
+			currentVersion = D3F802E216EA91D400A35F7F /* ORA.xcdatamodel */;
+			name = ORA.xcdatamodeld;
+			path = CoreData/ORA.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D3DE4C3416C9C5D400F9D593 /* Project object */;
 }
