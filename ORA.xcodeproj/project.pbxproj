@@ -19,10 +19,7 @@
 		D3DE4C5416C9C5D400F9D593 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3DE4C5316C9C5D400F9D593 /* Default@2x.png */; };
 		D3DE4C5616C9C5D400F9D593 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3DE4C5516C9C5D400F9D593 /* Default-568h@2x.png */; };
 		D3DE4C5916C9C5D400F9D593 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3DE4C5716C9C5D400F9D593 /* MainStoryboard.storyboard */; };
-		D3DE4C5C16C9C5D400F9D593 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DE4C5B16C9C5D400F9D593 /* ViewController.m */; };
-		D3DE4C6816C9C6A100F9D593 /* UserFeedback.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DE4C6716C9C6A100F9D593 /* UserFeedback.m */; };
 		D3DE4C6B16C9C9E000F9D593 /* LiveAudioStream.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DE4C6A16C9C9E000F9D593 /* LiveAudioStream.m */; };
-		D3DE4C6E16C9CAC700F9D593 /* NowPlayingData.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DE4C6D16C9CAC700F9D593 /* NowPlayingData.m */; };
 		D3F7434316E9EFD6000A2197 /* MetadataFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F7434216E9EFD6000A2197 /* MetadataFetcher.m */; };
 /* End PBXBuildFile section */
 
@@ -44,14 +41,8 @@
 		D3DE4C5316C9C5D400F9D593 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		D3DE4C5516C9C5D400F9D593 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		D3DE4C5816C9C5D400F9D593 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		D3DE4C5A16C9C5D400F9D593 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D3DE4C5B16C9C5D400F9D593 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		D3DE4C6616C9C6A100F9D593 /* UserFeedback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserFeedback.h; path = Model/UserFeedback.h; sourceTree = "<group>"; };
-		D3DE4C6716C9C6A100F9D593 /* UserFeedback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserFeedback.m; path = Model/UserFeedback.m; sourceTree = "<group>"; };
 		D3DE4C6916C9C9E000F9D593 /* LiveAudioStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LiveAudioStream.h; path = Model/LiveAudioStream.h; sourceTree = "<group>"; };
 		D3DE4C6A16C9C9E000F9D593 /* LiveAudioStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LiveAudioStream.m; path = Model/LiveAudioStream.m; sourceTree = "<group>"; };
-		D3DE4C6C16C9CAC700F9D593 /* NowPlayingData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NowPlayingData.h; path = Model/NowPlayingData.h; sourceTree = "<group>"; };
-		D3DE4C6D16C9CAC700F9D593 /* NowPlayingData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NowPlayingData.m; path = Model/NowPlayingData.m; sourceTree = "<group>"; };
 		D3F7434116E9EFD6000A2197 /* MetadataFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MetadataFetcher.h; path = Codename/Model/MetadataFetcher.h; sourceTree = "<group>"; };
 		D3F7434216E9EFD6000A2197 /* MetadataFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MetadataFetcher.m; path = Codename/Model/MetadataFetcher.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -116,8 +107,6 @@
 				D3DE4C4E16C9C5D400F9D593 /* AppDelegate.h */,
 				D3DE4C4F16C9C5D400F9D593 /* AppDelegate.m */,
 				D3DE4C5716C9C5D400F9D593 /* MainStoryboard.storyboard */,
-				D3DE4C5A16C9C5D400F9D593 /* ViewController.h */,
-				D3DE4C5B16C9C5D400F9D593 /* ViewController.m */,
 				D3DE4C4616C9C5D400F9D593 /* Supporting Files */,
 			);
 			name = ORA;
@@ -141,12 +130,8 @@
 		D3DE4C6516C9C66300F9D593 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D3DE4C6C16C9CAC700F9D593 /* NowPlayingData.h */,
 				D3F7434116E9EFD6000A2197 /* MetadataFetcher.h */,
 				D3F7434216E9EFD6000A2197 /* MetadataFetcher.m */,
-				D3DE4C6D16C9CAC700F9D593 /* NowPlayingData.m */,
-				D3DE4C6616C9C6A100F9D593 /* UserFeedback.h */,
-				D3DE4C6716C9C6A100F9D593 /* UserFeedback.m */,
 				D3DE4C6916C9C9E000F9D593 /* LiveAudioStream.h */,
 				D3DE4C6A16C9C9E000F9D593 /* LiveAudioStream.m */,
 			);
@@ -222,10 +207,7 @@
 			files = (
 				D3DE4C4C16C9C5D400F9D593 /* main.m in Sources */,
 				D3DE4C5016C9C5D400F9D593 /* AppDelegate.m in Sources */,
-				D3DE4C5C16C9C5D400F9D593 /* ViewController.m in Sources */,
-				D3DE4C6816C9C6A100F9D593 /* UserFeedback.m in Sources */,
 				D3DE4C6B16C9C9E000F9D593 /* LiveAudioStream.m in Sources */,
-				D3DE4C6E16C9CAC700F9D593 /* NowPlayingData.m in Sources */,
 				D303CA8416D45F0700E8EC61 /* NowPlayingViewController.m in Sources */,
 				D3F7434316E9EFD6000A2197 /* MetadataFetcher.m in Sources */,
 			);
