@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <AVFoundation/AVFoundation.h>
 
-@interface LiveAudioStream : NSObject
+#define WEFM_URL @"http://fms.96wefm.com:1936/live/961wefm.sdp/playlist.m3u8"
+
+@interface LiveAudioStream : AVPlayer
 
 @end
