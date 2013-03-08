@@ -10,6 +10,7 @@
 		D303CA8016D4591900E8EC61 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D303CA7F16D4591900E8EC61 /* AVFoundation.framework */; };
 		D303CA8416D45F0700E8EC61 /* NowPlayingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D303CA8316D45F0700E8EC61 /* NowPlayingViewController.m */; };
 		D3C0D32E16EA955900784C0F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3C0D32D16EA955900784C0F /* CoreData.framework */; };
+		D3C0D33116EA963B00784C0F /* BBCCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C0D32F16EA963B00784C0F /* BBCCoreDataManager.m */; };
 		D3DE4C4016C9C5D400F9D593 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3DE4C3F16C9C5D400F9D593 /* UIKit.framework */; };
 		D3DE4C4216C9C5D400F9D593 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3DE4C4116C9C5D400F9D593 /* Foundation.framework */; };
 		D3DE4C4416C9C5D400F9D593 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3DE4C4316C9C5D400F9D593 /* CoreGraphics.framework */; };
@@ -31,6 +32,8 @@
 		D303CA8216D45F0700E8EC61 /* NowPlayingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NowPlayingViewController.h; path = Controller/NowPlayingViewController.h; sourceTree = "<group>"; };
 		D303CA8316D45F0700E8EC61 /* NowPlayingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NowPlayingViewController.m; path = Controller/NowPlayingViewController.m; sourceTree = "<group>"; };
 		D3C0D32D16EA955900784C0F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		D3C0D32F16EA963B00784C0F /* BBCCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBCCoreDataManager.m; path = CoreData/BBCCoreDataManager.m; sourceTree = "<group>"; };
+		D3C0D33016EA963B00784C0F /* BBCCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBCCoreDataManager.h; path = CoreData/BBCCoreDataManager.h; sourceTree = "<group>"; };
 		D3DE4C3C16C9C5D400F9D593 /* ORA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ORA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3DE4C3F16C9C5D400F9D593 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D3DE4C4116C9C5D400F9D593 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -153,6 +156,8 @@
 			isa = PBXGroup;
 			children = (
 				D3F802E116EA91D400A35F7F /* ORA.xcdatamodeld */,
+				D3C0D33016EA963B00784C0F /* BBCCoreDataManager.h */,
+				D3C0D32F16EA963B00784C0F /* BBCCoreDataManager.m */,
 				D3F802E516EA92C100A35F7F /* Metadata.h */,
 				D3F802E616EA92C100A35F7F /* Metadata.m */,
 			);
@@ -232,6 +237,7 @@
 				D3F7434316E9EFD6000A2197 /* MetadataFetcher.m in Sources */,
 				D3F802E316EA91D400A35F7F /* ORA.xcdatamodeld in Sources */,
 				D3F802E716EA92C100A35F7F /* Metadata.m in Sources */,
+				D3C0D33116EA963B00784C0F /* BBCCoreDataManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
