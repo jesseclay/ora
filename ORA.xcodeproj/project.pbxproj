@@ -27,6 +27,7 @@
 		D3F802E716EA92C100A35F7F /* Metadata.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F802E616EA92C100A35F7F /* Metadata.m */; };
 		D3FA64C316EAB9A000466230 /* ORACoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FA64C216EAB9A000466230 /* ORACoreDataManager.m */; };
 		D3FA64C916EABE8E00466230 /* Metadata+CSRDS.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FA64C816EABE8E00466230 /* Metadata+CSRDS.m */; };
+		D3FA64CC16EAC7F500466230 /* CSRDSCoreDataConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FA64CB16EAC7F500466230 /* CSRDSCoreDataConnector.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,8 @@
 		D3FA64C216EAB9A000466230 /* ORACoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ORACoreDataManager.m; path = CoreData/ORACoreDataManager.m; sourceTree = "<group>"; };
 		D3FA64C716EABE8E00466230 /* Metadata+CSRDS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Metadata+CSRDS.h"; path = "CoreData/Metadata+CSRDS.h"; sourceTree = "<group>"; };
 		D3FA64C816EABE8E00466230 /* Metadata+CSRDS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Metadata+CSRDS.m"; path = "CoreData/Metadata+CSRDS.m"; sourceTree = "<group>"; };
+		D3FA64CA16EAC7F500466230 /* CSRDSCoreDataConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSRDSCoreDataConnector.h; path = CoreData/CSRDSCoreDataConnector.h; sourceTree = "<group>"; };
+		D3FA64CB16EAC7F500466230 /* CSRDSCoreDataConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSRDSCoreDataConnector.m; path = CoreData/CSRDSCoreDataConnector.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +166,8 @@
 			children = (
 				D3FA64C716EABE8E00466230 /* Metadata+CSRDS.h */,
 				D3FA64C816EABE8E00466230 /* Metadata+CSRDS.m */,
+				D3FA64CA16EAC7F500466230 /* CSRDSCoreDataConnector.h */,
+				D3FA64CB16EAC7F500466230 /* CSRDSCoreDataConnector.m */,
 				D3F802E116EA91D400A35F7F /* ORA.xcdatamodeld */,
 				D3FA64C116EAB9A000466230 /* ORACoreDataManager.h */,
 				D3FA64C216EAB9A000466230 /* ORACoreDataManager.m */,
@@ -250,6 +255,7 @@
 				D3C0D33116EA963B00784C0F /* BBCCoreDataManager.m in Sources */,
 				D3FA64C316EAB9A000466230 /* ORACoreDataManager.m in Sources */,
 				D3FA64C916EABE8E00466230 /* Metadata+CSRDS.m in Sources */,
+				D3FA64CC16EAC7F500466230 /* CSRDSCoreDataConnector.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
