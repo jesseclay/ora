@@ -9,7 +9,6 @@
 #import "BBCCoreDataManager.h"
 #import <UIKit/UIManagedDocument.h>
 
-#define DOCUMENT_NAME @"CoreDataDocument"
 
 @implementation BBCCoreDataManager
 
@@ -40,7 +39,7 @@
                  URLsForDirectory:NSDocumentDirectory
                  inDomains:NSUserDomainMask] lastObject];
   
-  url = [url URLByAppendingPathComponent:DOCUMENT_NAME];
+  url = [url URLByAppendingPathComponent:[[self class] documentName]];
   
   UIManagedDocument *document = [[UIManagedDocument alloc] initWithFileURL:url];
   
@@ -69,6 +68,13 @@
     // DOCUMENT IS OPEN
     completionHandler(document);
   }
+}
+
+#pragma mark subclasses must override
+
++ (NSString *)documentName
+{
+  return nil;
 }
 
 @end
