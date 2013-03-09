@@ -25,6 +25,7 @@
 		D3F7434316E9EFD6000A2197 /* MetadataFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F7434216E9EFD6000A2197 /* MetadataFetcher.m */; };
 		D3F802E316EA91D400A35F7F /* ORA.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D3F802E116EA91D400A35F7F /* ORA.xcdatamodeld */; };
 		D3F802E716EA92C100A35F7F /* Metadata.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F802E616EA92C100A35F7F /* Metadata.m */; };
+		D3FA64C316EAB9A000466230 /* ORACoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FA64C216EAB9A000466230 /* ORACoreDataManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,8 @@
 		D3F802E216EA91D400A35F7F /* ORA.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ORA.xcdatamodel; sourceTree = "<group>"; };
 		D3F802E516EA92C100A35F7F /* Metadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Metadata.h; path = CoreData/Metadata.h; sourceTree = "<group>"; };
 		D3F802E616EA92C100A35F7F /* Metadata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Metadata.m; path = CoreData/Metadata.m; sourceTree = "<group>"; };
+		D3FA64C116EAB9A000466230 /* ORACoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ORACoreDataManager.h; path = CoreData/ORACoreDataManager.h; sourceTree = "<group>"; };
+		D3FA64C216EAB9A000466230 /* ORACoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ORACoreDataManager.m; path = CoreData/ORACoreDataManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +159,8 @@
 			isa = PBXGroup;
 			children = (
 				D3F802E116EA91D400A35F7F /* ORA.xcdatamodeld */,
+				D3FA64C116EAB9A000466230 /* ORACoreDataManager.h */,
+				D3FA64C216EAB9A000466230 /* ORACoreDataManager.m */,
 				D3C0D33016EA963B00784C0F /* BBCCoreDataManager.h */,
 				D3C0D32F16EA963B00784C0F /* BBCCoreDataManager.m */,
 				D3F802E516EA92C100A35F7F /* Metadata.h */,
@@ -238,6 +243,7 @@
 				D3F802E316EA91D400A35F7F /* ORA.xcdatamodeld in Sources */,
 				D3F802E716EA92C100A35F7F /* Metadata.m in Sources */,
 				D3C0D33116EA963B00784C0F /* BBCCoreDataManager.m in Sources */,
+				D3FA64C316EAB9A000466230 /* ORACoreDataManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
