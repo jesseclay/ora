@@ -6,11 +6,11 @@
 //  Copyright (c) 2013 CS193p. All rights reserved.
 //
 
-#import "MetadataFetcher.h"
+#import "CSRDSMetadataFetcher.h"
 
 #define ENDPOINT_URL_STRING @"http://star947tt.com/sites/all/modules/csrds/csrds_now_playing.php"
 
-@implementation MetadataFetcher
+@implementation CSRDSMetadataFetcher
 
 
 // communicates with server using HTTP; we receive JSON

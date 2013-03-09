@@ -18,7 +18,7 @@
 #define MD_TYPE_SEGUE @"Segue"
 #define MD_TYPE_SPOT  @"Spot"
 
-@interface MetadataFetcher : NSObject
+@interface CSRDSMetadataFetcher : NSObject
 
 + (NSDictionary *)data; // blocking network call
 
