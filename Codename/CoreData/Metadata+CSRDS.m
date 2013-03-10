@@ -67,4 +67,20 @@
   return metadata;
 }
 
++ (Metadata *)nowPlayingData
+{
+  NSDictionary *csrdsData = [CSRDSMetadataFetcher data];
+  
+  Metadata *metadata = [[Metadata alloc] init];
+  
+  metadata.type     = csrdsData[MD_NOW_TYPE];
+  metadata.title    = csrdsData[MD_NOW_TITLE];
+  metadata.artiste  = csrdsData[MD_NOW_ARTISTE];
+  metadata.datetime = [NSDate date];
+  metadata.artURLStringLarge  = csrdsData[MD_NOW_URL_COVER_LARGE];
+  metadata.artURLStringMedium = csrdsData[MD_NOW_URL_COVER_MED];
+  
+  return metadata;
+}
+
 @end

@@ -14,4 +14,7 @@
 + (Metadata *)songMetadataWithCSRDSData:(NSDictionary *)csrdsData
                  inManagedObjectContext:(NSManagedObjectContext *)context;
 
+// blocking, does not use CoreData, fetches directly from remote
++ (Metadata *)nowPlayingData;
+
 @end
