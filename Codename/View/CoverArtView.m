@@ -19,6 +19,15 @@
     return self;
 }
 
+#pragma mark Image
+
+- (void)setImage:(UIImage *)image
+{
+  _image = image;
+  UIImageView *iv = [[UIImageView alloc] initWithImage:image];
+  [self addSubview:iv];
+}
+
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

@@ -13,6 +13,7 @@
 #import "CoverArtCollectionViewCell.h"
 
 #define REUSE_IDENTIFIER @"CoverArt"
+#define COVER_ART_QUEUE   "CoverArtNetworkQueue"
 
 
 @interface NowPlayingViewController () <UICollectionViewDataSource>
@@ -92,6 +93,15 @@
 
 - (void)setCell:(CoverArtCollectionViewCell *)cell withArtFromMetadata:(Metadata *)metadata
 {
+  NSURL *url = [[NSURL alloc] initWithString:metadata.artURLStringMedium];
+  dispatch_queue_t q = dispatch_queue_create(COVER_ART_QUEUE, NULL);
+  dispatch_async(q, ^{
+    NSData *data = [[NSData alloc] initWithContentsOfURL:url];
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+      cell.coverArtView.image = [[UIImage alloc] initWithData:data];
+    });
+  });
   
 }
 

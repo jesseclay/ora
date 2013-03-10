@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CoverArtView.h"
 
 @interface CoverArtCollectionViewCell : UICollectionViewCell
-@property (weak, nonatomic) IBOutlet UIView *coverArtView;
+@property (strong, nonatomic) IBOutlet CoverArtView *coverArtView;
 @end

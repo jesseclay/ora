@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface CoverArtView : UIView
-
+@property (strong, nonatomic) UIImage *image;
 @end
