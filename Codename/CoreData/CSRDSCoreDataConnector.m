@@ -12,29 +12,55 @@
 #import "CSRDSMetadataFetcher.h"
 
 #define QUEUE_NAME "CoreDataCSRDSConnectorDownloadQueue"
+#define METADATA_FETCH_LIMIT 1
 
 @implementation CSRDSCoreDataConnector
 
-+ (void)fetchAndUpdateCoreDataMetadata
++ (void)fetchAndUpdateCoreDataMetadata:(void (^)(BOOL))successHandler
 {
-  [ORACoreDataManager sharedManagedObjectContext:^(NSManagedObjectContext *c) {
-    [[self class] fetchAndUpdateInManagedObjectContext:c];
+  [ORACoreDataManager sharedManagedObjectContext:^(NSManagedObjectContext *context) {
+    dispatch_queue_t networkQueue = dispatch_queue_create(QUEUE_NAME, NULL);
+    
+    dispatch_async(networkQueue, ^{
+      NSDictionary *csrdsMetadata = [CSRDSMetadataFetcher data];
+      [context performBlock:^{
+        [Metadata songMetadataWithCSRDSData:csrdsMetadata
+                     inManagedObjectContext:context];
+      }];
+      dispatch_async(dispatch_get_main_queue(), ^{
+        successHandler(YES);
+      });
+    });
+    
   }];
 }
 
-#pragma mark private
-
-+ (void)fetchAndUpdateInManagedObjectContext:(NSManagedObjectContext *)context
++ (Metadata *)nowPlayingDataWithContext:(NSManagedObjectContext *)context
 {
-  dispatch_queue_t networkQueue = dispatch_queue_create(QUEUE_NAME, NULL);
-  dispatch_async(networkQueue, ^{
-    NSDictionary *csrdsMetadata = [CSRDSMetadataFetcher data];
-    
-    [context performBlock:^{
-      [Metadata songMetadataWithCSRDSData:csrdsMetadata
-                   inManagedObjectContext:context];
-    }];
-  });
+  NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Metadata"];
+  request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"datetime" ascending:YES selector:@selector(compare:)]];
+  [request setFetchLimit:METADATA_FETCH_LIMIT];
+  
+  Metadata *metadata = nil;
+  NSError *error = nil;
+  NSArray *matches = [context executeFetchRequest:request error:&error];
+  
+  if (matches && [matches count] == METADATA_FETCH_LIMIT) {
+    metadata = [matches lastObject];
+  }
+  
+  return metadata;
+}
+
++ (NSArray *)metadataWithContext:(NSManagedObjectContext *)context
+{
+  NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Metadata"];
+  request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"datetime" ascending:YES selector:@selector(compare:)]];
+  
+  NSError *error = nil;
+  NSArray *matches = [context executeFetchRequest:request error:&error];
+  
+  return matches;
 }
 
 @end

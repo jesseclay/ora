@@ -7,9 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Metadata.h"
 
 @interface CSRDSCoreDataConnector : NSObject
 
-+ (void)fetchAndUpdateCoreDataMetadata;
+// non-blocking, success handler is invoked in main queue
++ (void)fetchAndUpdateCoreDataMetadata:(void (^)(BOOL))successHandler;
+
+// the latest data stored in CoreData
++ (Metadata *)nowPlayingDataWithContext:(NSManagedObjectContext *)context;
+
+
+// all the metadata stored in CoreData
++ (NSArray *)metadataWithContext:(NSManagedObjectContext *)context;
+
 
 @end
