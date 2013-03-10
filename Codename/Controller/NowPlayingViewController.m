@@ -8,12 +8,24 @@
 
 #import "NowPlayingViewController.h"
 #import "LiveAudioStream.h"
+#import "CSRDSCoreDataConnector.h"
+#import "ORACoreDataManager.h"
+#import "CoverArtCollectionViewCell.h"
 
-@interface NowPlayingViewController ()
+#define REUSE_IDENTIFIER @"CoverArt"
+
+
+@interface NowPlayingViewController () <UICollectionViewDataSource>
+
 @property (strong, nonatomic)LiveAudioStream *liveAudioStream;
+@property (strong, nonatomic)NSManagedObjectContext *managedObjectContext;
+@property (strong, nonatomic)NSArray *metadataHistory;
+@property (weak, nonatomic) IBOutlet UICollectionView *coverArtCollectionView;
 @end
 
 @implementation NowPlayingViewController
+
+#pragma mark managed object context
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -24,9 +36,20 @@
   return self;
 }
 
+#pragma mark Lifecycle
+
 - (void)viewDidLoad
 {
   [super viewDidLoad];
+  [ORACoreDataManager sharedManagedObjectContext:^(NSManagedObjectContext *c) {
+    self.managedObjectContext = c;
+    [CSRDSCoreDataConnector fetchAndUpdateCoreDataMetadata:^(BOOL success) {
+      if (success) {
+        self.metadataHistory = [CSRDSCoreDataConnector metadataWithContext:c];
+        [self syncUI];
+      }
+    }];
+  }];
 }
 
 
@@ -50,5 +73,64 @@
 - (IBAction)pause:(id)sender {
   [self.liveAudioStream pause];
 }
+
+- (void)refresh
+{
+  self.navigationController.title = @"hi";
+}
+
+#pragma mark UI
+
+
+- (void)syncUI
+{
+  [self.coverArtCollectionView reloadData];
+}
+
+
+#pragma mark UICollectionView Data Source - Helpers
+
+- (void)setCell:(CoverArtCollectionViewCell *)cell withArtFromMetadata:(Metadata *)metadata
+{
+}
+
+
+#pragma mark UICollectionView Data Source
+
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
+                  cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+  UICollectionViewCell *cell = [self.coverArtCollectionView
+                                dequeueReusableCellWithReuseIdentifier:REUSE_IDENTIFIER
+                                forIndexPath:indexPath];
+  
+  if ([cell isKindOfClass:[CoverArtCollectionViewCell class]]) {
+    
+    CoverArtCollectionViewCell *artCell = (CoverArtCollectionViewCell *) cell;
+    Metadata *metadata = [self.metadataHistory objectAtIndex:indexPath.item];
+    // get metadata entry
+    
+    [self setCell:artCell withArtFromMetadata:metadata];
+    
+    
+    
+  }
+  return cell;
+}
+
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView
+     numberOfItemsInSection:(NSInteger)section
+{
+  return self.metadataHistory ? [self.metadataHistory count] : 0;
+}
+
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+  return 1;
+}
+
 
 @end

@@ -28,6 +28,8 @@
 		D3FA64C316EAB9A000466230 /* ORACoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FA64C216EAB9A000466230 /* ORACoreDataManager.m */; };
 		D3FA64C916EABE8E00466230 /* Metadata+CSRDS.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FA64C816EABE8E00466230 /* Metadata+CSRDS.m */; };
 		D3FA64CC16EAC7F500466230 /* CSRDSCoreDataConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FA64CB16EAC7F500466230 /* CSRDSCoreDataConnector.m */; };
+		D3FEB32F16EBEE9E00E82B63 /* CoverArtCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FEB32E16EBEE9E00E82B63 /* CoverArtCollectionViewCell.m */; };
+		D3FEB33216EBEECF00E82B63 /* CoverArtView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FEB33116EBEECF00E82B63 /* CoverArtView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +66,10 @@
 		D3FA64C816EABE8E00466230 /* Metadata+CSRDS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Metadata+CSRDS.m"; path = "CoreData/Metadata+CSRDS.m"; sourceTree = "<group>"; };
 		D3FA64CA16EAC7F500466230 /* CSRDSCoreDataConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSRDSCoreDataConnector.h; path = CoreData/CSRDSCoreDataConnector.h; sourceTree = "<group>"; };
 		D3FA64CB16EAC7F500466230 /* CSRDSCoreDataConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSRDSCoreDataConnector.m; path = CoreData/CSRDSCoreDataConnector.m; sourceTree = "<group>"; };
+		D3FEB32D16EBEE9E00E82B63 /* CoverArtCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoverArtCollectionViewCell.h; path = View/CoverArtCollectionViewCell.h; sourceTree = "<group>"; };
+		D3FEB32E16EBEE9E00E82B63 /* CoverArtCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoverArtCollectionViewCell.m; path = View/CoverArtCollectionViewCell.m; sourceTree = "<group>"; };
+		D3FEB33016EBEECF00E82B63 /* CoverArtView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoverArtView.h; path = View/CoverArtView.h; sourceTree = "<group>"; };
+		D3FEB33116EBEECF00E82B63 /* CoverArtView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoverArtView.m; path = View/CoverArtView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +129,7 @@
 		D3DE4C4516C9C5D400F9D593 /* ORA */ = {
 			isa = PBXGroup;
 			children = (
+				D3FEB33316EBEED500E82B63 /* View */,
 				D3F802E416EA91DB00A35F7F /* CoreData */,
 				D303CA8116D45ED900E8EC61 /* Controller */,
 				D3DE4C6516C9C66300F9D593 /* Model */,
@@ -177,6 +184,17 @@
 				D3F802E616EA92C100A35F7F /* Metadata.m */,
 			);
 			name = CoreData;
+			sourceTree = "<group>";
+		};
+		D3FEB33316EBEED500E82B63 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D3FEB32D16EBEE9E00E82B63 /* CoverArtCollectionViewCell.h */,
+				D3FEB32E16EBEE9E00E82B63 /* CoverArtCollectionViewCell.m */,
+				D3FEB33016EBEECF00E82B63 /* CoverArtView.h */,
+				D3FEB33116EBEECF00E82B63 /* CoverArtView.m */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +274,8 @@
 				D3FA64C316EAB9A000466230 /* ORACoreDataManager.m in Sources */,
 				D3FA64C916EABE8E00466230 /* Metadata+CSRDS.m in Sources */,
 				D3FA64CC16EAC7F500466230 /* CSRDSCoreDataConnector.m in Sources */,
+				D3FEB32F16EBEE9E00E82B63 /* CoverArtCollectionViewCell.m in Sources */,
+				D3FEB33216EBEECF00E82B63 /* CoverArtView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

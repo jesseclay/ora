@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="f1i-Uo-CGW">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -7,18 +7,110 @@
         <!--Now Playing View Controller-->
         <scene sceneID="5">
             <objects>
-                <viewController id="2" customClass="NowPlayingViewController" sceneMemberID="viewController"/>
+                <viewController id="2" customClass="NowPlayingViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="abN-eU-i6l">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Tba-TK-eZZ">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="320" id="jTi-gE-YMq"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2Lb-Dd-9Kr">
+                                    <size key="itemSize" width="293" height="293"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CoverArt" id="R7Q-50-ag9" customClass="CoverArtCollectionViewCell">
+                                        <rect key="frame" x="0.0" y="13" width="293" height="293"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="293" height="293"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NJs-3p-nhL" customClass="CoverArtView">
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="NJs-3p-nhL" firstAttribute="bottom" secondItem="R7Q-50-ag9" secondAttribute="bottom" type="default" id="8ZL-I6-z1N"/>
+                                            <constraint firstItem="NJs-3p-nhL" firstAttribute="trailing" secondItem="R7Q-50-ag9" secondAttribute="trailing" type="default" id="QKz-kb-6Fo"/>
+                                            <constraint firstItem="NJs-3p-nhL" firstAttribute="leading" secondItem="R7Q-50-ag9" secondAttribute="leading" type="default" id="z1x-F6-tZz"/>
+                                            <constraint firstItem="NJs-3p-nhL" firstAttribute="top" secondItem="R7Q-50-ag9" secondAttribute="top" type="default" id="zkI-Rp-LNR"/>
+                                        </constraints>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="2" id="bIV-pH-5E4"/>
+                                    <outlet property="delegate" destination="2" id="NiY-D0-gKq"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Tba-TK-eZZ" firstAttribute="top" secondItem="abN-eU-i6l" secondAttribute="top" type="default" id="A7E-fZ-LEZ"/>
+                            <constraint firstItem="Tba-TK-eZZ" firstAttribute="trailing" secondItem="abN-eU-i6l" secondAttribute="trailing" type="default" id="Qfu-eV-mqy"/>
+                            <constraint firstItem="Tba-TK-eZZ" firstAttribute="leading" secondItem="abN-eU-i6l" secondAttribute="leading" type="default" id="dE7-aT-pnu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="h33-m3-cCp"/>
+                    <connections>
+                        <outlet property="coverArtCollectionView" destination="Tba-TK-eZZ" id="Cxs-RT-0Fc"/>
+                    </connections>
+                </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="475" y="444"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="FCU-3q-VX7">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="f1i-Uo-CGW" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9Sj-t7-CGo">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="rootViewController" id="ImQ-H4-9oU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TUB-BC-lzn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="13" y="444"/>
         </scene>
     </scenes>
     <classes>
+        <class className="CoverArtCollectionViewCell" superclassName="UICollectionViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CoverArtCollectionViewCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="coverArtView" candidateClass="UIView"/>
+            </relationships>
+        </class>
+        <class className="CoverArtView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CoverArtView.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
         <class className="NowPlayingViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NowPlayingViewController.h"/>
             <relationships>
                 <relationship kind="action" name="pause:"/>
                 <relationship kind="action" name="play:"/>
+                <relationship kind="outlet" name="coverArtCollectionView" candidateClass="UICollectionView"/>
             </relationships>
+        </class>
+        <class className="UICollectionReusableView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionReusableView.h"/>
+        </class>
+        <class className="UICollectionViewCell" superclassName="UICollectionReusableView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewCell.h"/>
+        </class>
+        <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
