@@ -92,6 +92,7 @@
 
 - (void)setCell:(CoverArtCollectionViewCell *)cell withArtFromMetadata:(Metadata *)metadata
 {
+  
 }
 
 
@@ -112,9 +113,6 @@
     // get metadata entry
     
     [self setCell:artCell withArtFromMetadata:metadata];
-    
-    
-    
   }
   return cell;
 }
