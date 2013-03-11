@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface URLKeyDataValueFileCache : NSObject
+@interface URLCache : NSObject
 
 + (NSData *)get:(NSURL *)url;
 + (void)put:(NSData *)data url:(NSURL *)url;

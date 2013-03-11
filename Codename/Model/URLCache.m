@@ -6,10 +6,10 @@
 //  Copyright (c) 2013 CS193p. All rights reserved.
 //
 
-#import "URLKeyDataValueFileCache.h"
+#import "URLCache.h"
 #import "FileStorage.h"
 
-@implementation URLKeyDataValueFileCache
+@implementation URLCache
 
 
 + (NSData *)get:(NSURL *)url

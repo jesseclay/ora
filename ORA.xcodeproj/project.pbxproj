@@ -32,7 +32,7 @@
 		D3FEB33216EBEECF00E82B63 /* CoverArtView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FEB33116EBEECF00E82B63 /* CoverArtView.m */; };
 		D3FF0B1216ED697F0006C6E3 /* NetworkActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FF0B0D16ED697F0006C6E3 /* NetworkActivityIndicator.m */; };
 		D3FF0B1316ED697F0006C6E3 /* FileStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FF0B0F16ED697F0006C6E3 /* FileStorage.m */; };
-		D3FF0B1416ED697F0006C6E3 /* URLKeyDataValueFileCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FF0B1116ED697F0006C6E3 /* URLKeyDataValueFileCache.m */; };
+		D3FF0B1416ED697F0006C6E3 /* URLCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FF0B1116ED697F0006C6E3 /* URLCache.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,8 +77,8 @@
 		D3FF0B0D16ED697F0006C6E3 /* NetworkActivityIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NetworkActivityIndicator.m; path = Codename/Model/NetworkActivityIndicator.m; sourceTree = "<group>"; };
 		D3FF0B0E16ED697F0006C6E3 /* FileStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FileStorage.h; path = Codename/Model/FileStorage.h; sourceTree = "<group>"; };
 		D3FF0B0F16ED697F0006C6E3 /* FileStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FileStorage.m; path = Codename/Model/FileStorage.m; sourceTree = "<group>"; };
-		D3FF0B1016ED697F0006C6E3 /* URLKeyDataValueFileCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = URLKeyDataValueFileCache.h; path = Codename/Model/URLKeyDataValueFileCache.h; sourceTree = "<group>"; };
-		D3FF0B1116ED697F0006C6E3 /* URLKeyDataValueFileCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = URLKeyDataValueFileCache.m; path = Codename/Model/URLKeyDataValueFileCache.m; sourceTree = "<group>"; };
+		D3FF0B1016ED697F0006C6E3 /* URLCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = URLCache.h; path = Codename/Model/URLCache.h; sourceTree = "<group>"; };
+		D3FF0B1116ED697F0006C6E3 /* URLCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = URLCache.m; path = Codename/Model/URLCache.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,8 +172,8 @@
 				D3FF0B0D16ED697F0006C6E3 /* NetworkActivityIndicator.m */,
 				D3FF0B0E16ED697F0006C6E3 /* FileStorage.h */,
 				D3FF0B0F16ED697F0006C6E3 /* FileStorage.m */,
-				D3FF0B1016ED697F0006C6E3 /* URLKeyDataValueFileCache.h */,
-				D3FF0B1116ED697F0006C6E3 /* URLKeyDataValueFileCache.m */,
+				D3FF0B1016ED697F0006C6E3 /* URLCache.h */,
+				D3FF0B1116ED697F0006C6E3 /* URLCache.m */,
 				D3F7434116E9EFD6000A2197 /* CSRDSMetadataFetcher.h */,
 				D3F7434216E9EFD6000A2197 /* CSRDSMetadataFetcher.m */,
 				D3DE4C6916C9C9E000F9D593 /* LiveAudioStream.h */,
@@ -293,7 +293,7 @@
 				D3FEB33216EBEECF00E82B63 /* CoverArtView.m in Sources */,
 				D3FF0B1216ED697F0006C6E3 /* NetworkActivityIndicator.m in Sources */,
 				D3FF0B1316ED697F0006C6E3 /* FileStorage.m in Sources */,
-				D3FF0B1416ED697F0006C6E3 /* URLKeyDataValueFileCache.m in Sources */,
+				D3FF0B1416ED697F0006C6E3 /* URLCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
