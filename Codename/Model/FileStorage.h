@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#define CAPACITY_MB 1
+#define CAPACITY_MB 10
 
 #define NSLOG_FILESTORAGE NO
 
