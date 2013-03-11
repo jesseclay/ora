@@ -58,6 +58,10 @@
   for (NSURL *url in urls) {
     sum += [[NSData dataWithContentsOfURL:url] length];
   }
+  
+  if (NSLOG_FILESTORAGE) {
+    NSLog(@"FileStorage: %f MB in use", sum / 1024.0 / 1024.0);
+  }
 
   // while this sum exceeds the limit
   while (sum > CAPACITY_MB * 1024 * 1024) { // 1 MB

@@ -10,6 +10,8 @@
 
 #define CAPACITY_MB 1
 
+#define NSLOG_FILESTORAGE NO
+
 @interface FileStorage : NSObject
 
 + (void)put:(NSData *)data forKey:(NSString *)key;
