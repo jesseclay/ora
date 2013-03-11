@@ -23,4 +23,13 @@
     return self;
 }
 
+- (void)prepareForReuse
+{
+  [super prepareForReuse];
+  
+  for (UIView *subView in self.coverArtView.subviews) {
+    [subView removeFromSuperview];
+  }
+}
+
 @end
