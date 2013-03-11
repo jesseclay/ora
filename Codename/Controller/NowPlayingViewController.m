@@ -11,9 +11,12 @@
 #import "CSRDSCoreDataConnector.h"
 #import "ORACoreDataManager.h"
 #import "CoverArtCollectionViewCell.h"
+#import "URLCache.h"
 
 #define REUSE_IDENTIFIER @"CoverArt"
 #define COVER_ART_QUEUE   "CoverArtNetworkQueue"
+
+#define NSLOG_NPVC NO
 
 
 @interface NowPlayingViewController () <UICollectionViewDataSource>
@@ -88,6 +91,8 @@
   [self.coverArtCollectionView reloadData];
 }
 
+#pragma mark Gestures
+
 
 #pragma mark UICollectionView Data Source - Helpers
 
@@ -95,11 +100,21 @@
 {
   NSURL *url = [[NSURL alloc] initWithString:metadata.artURLStringMedium];
   dispatch_queue_t q = dispatch_queue_create(COVER_ART_QUEUE, NULL);
+  CoverArtView *artView = cell.coverArtView;
+  
   dispatch_async(q, ^{
-    NSData *data = [[NSData alloc] initWithContentsOfURL:url];
+    
+    NSData *data;
+    if ([URLCache contains:url]) {
+      data = [URLCache get:url];
+    } else {
+      data = [[NSData alloc] initWithContentsOfURL:url];
+      [URLCache put:data url:url];
+    }
+    UIImage *image = [[UIImage alloc] initWithData:data];
     
     dispatch_async(dispatch_get_main_queue(), ^{
-      cell.coverArtView.image = [[UIImage alloc] initWithData:data];
+      artView.image = image;
     });
   });
   
@@ -120,6 +135,12 @@
     
     CoverArtCollectionViewCell *artCell = (CoverArtCollectionViewCell *) cell;
     Metadata *metadata = [self.metadataHistory objectAtIndex:indexPath.item];
+    
+    if (NSLOG_NPVC) {
+      NSLog(@"loading position: %d (%@)", indexPath.item, metadata.artiste);
+    }
+    
+    
     // get metadata entry
     
     [self setCell:artCell withArtFromMetadata:metadata];
@@ -131,6 +152,10 @@
 - (NSInteger)collectionView:(UICollectionView *)collectionView
      numberOfItemsInSection:(NSInteger)section
 {
+  if (NSLOG_NPVC) {
+    NSLog(@"number of metadatas: %d", [self.metadataHistory count]);
+  }
+  
   return self.metadataHistory ? [self.metadataHistory count] : 0;
 }
 
