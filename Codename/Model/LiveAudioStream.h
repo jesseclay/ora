@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
 
-#define WEFM_URL @"http://fms.96wefm.com:1936/live/961wefm.sdp/playlist.m3u8"
+#define WEFM_URL @"http://fms.96wefm.com:1936/live/star947.sdp/playlist.m3u8"
 
 @interface LiveAudioStream : AVPlayer
 
