@@ -21,5 +21,18 @@
   return sharedInstance;
 }
 
+- (void)play:(void (^)(BOOL))successHandler
+
+{
+  dispatch_queue_t q = dispatch_queue_create("PLAYBACK_Q", NULL);
+  
+  dispatch_async(q, ^{
+    [super play];
+    dispatch_async(dispatch_get_main_queue(), ^{
+      successHandler(YES);
+    });
+  });
+}
+
 
 @end

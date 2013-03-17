@@ -13,10 +13,10 @@
 #import "CoverArtCollectionViewCell.h"
 #import "URLCache.h"
 #import "CachedImage.h"
+#import "PlayPauseButton.h"
 #import <MediaPlayer/MPVolumeView.h>
 #import <MediaPlayer/MPNowPlayingInfoCenter.h>
 #import <MediaPlayer/MPMediaItem.h>
-
 #define REUSE_IDENTIFIER @"CoverArt"
 #define DEFAULT_COVER_ART_IMAGENAME  @"ora.png"
 #define COVER_ART_QUEUE   "CoverArtNetworkQueue"
@@ -32,7 +32,7 @@
 @property (strong, nonatomic) Metadata *metadata;
 @property (weak, nonatomic) IBOutlet MPVolumeView *volumeView;
 @property (nonatomic) BOOL statusPlaying;
-@property (weak, nonatomic) IBOutlet UIButton *playpauseButton;
+@property (weak, nonatomic) IBOutlet PlayPauseButton *playpauseButton;
 @end
 
 @implementation NowPlayingViewController
@@ -167,11 +167,14 @@
 
 
 - (IBAction)play:(id)sender {
-  NSLog(@"%d", self.liveAudioStream.status);
   if (self.statusPlaying == YES) {
     [self.liveAudioStream pause];
+    [self.playpauseButton displayPlayImage];
   } else {
-    [self.liveAudioStream play];
+    [self.playpauseButton spin];
+    [self.liveAudioStream play:^(BOOL success) {
+      [self.playpauseButton displayPauseImage];
+    }];
   }
   self.statusPlaying = !self.statusPlaying;
 }

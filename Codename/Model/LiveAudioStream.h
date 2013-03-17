@@ -14,4 +14,6 @@
 
 + (LiveAudioStream *)sharedInstance;
 
+- (void)play:(void (^)(BOOL))successHandler;
+
 @end

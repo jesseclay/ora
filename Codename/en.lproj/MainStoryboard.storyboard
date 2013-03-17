@@ -15,7 +15,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hgN-tb-FLQ" customClass="CoverArtView">
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="93s-6k-KNm">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="93s-6k-KNm" customClass="PlayPauseButton">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="DHV-gG-gwY"/>
                                     <constraint firstAttribute="height" constant="70" id="XNn-Up-4b3"/>
@@ -72,7 +72,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="VYc-ad-DxB">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -157,35 +157,6 @@
     <resources>
         <image name="playbutton@2x.png" width="140" height="140"/>
     </resources>
-    <classes>
-        <class className="CoreDataTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CoreDataTableViewController.h"/>
-        </class>
-        <class className="CoverArtView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CoverArtView.h"/>
-        </class>
-        <class className="HistoryTVC" superclassName="CoreDataTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/HistoryTVC.h"/>
-        </class>
-        <class className="MPVolumeView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MPVolumeView.h"/>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="NowPlayingViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NowPlayingViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="play:"/>
-                <relationship kind="outlet" name="coverArtView" candidateClass="CoverArtView"/>
-                <relationship kind="outlet" name="playpauseButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="volumeView" candidateClass="MPVolumeView"/>
-            </relationships>
-        </class>
-        <class className="UIRefreshControl" superclassName="UIControl">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIRefreshControl.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
