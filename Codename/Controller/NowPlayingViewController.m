@@ -32,6 +32,7 @@
 @property (strong, nonatomic) Metadata *metadata;
 @property (weak, nonatomic) IBOutlet MPVolumeView *volumeView;
 @property (nonatomic) BOOL statusPlaying;
+@property (weak, nonatomic) IBOutlet UIButton *playpauseButton;
 @end
 
 @implementation NowPlayingViewController
@@ -51,6 +52,7 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
+  [self.liveAudioStream addObserver:self forKeyPath:@"status" options:0 context:nil];
   self.statusPlaying = NO;
   [ORACoreDataManager sharedManagedObjectContext:^(NSManagedObjectContext *c) {
     self.managedObjectContext = c;
@@ -71,6 +73,18 @@
   [self resignFirstResponder];
 }
 
+
+#pragma mark KVO
+
+- (void)observeValueForKeyPath:(NSString *)keyPath
+                      ofObject:(id)object
+                        change:(NSDictionary *)change
+                       context:(void *)context
+{
+  if (object == self.liveAudioStream && [keyPath isEqualToString:@"status"]) {
+    self.playpauseButton.enabled = self.liveAudioStream.status == AVPlayerStatusReadyToPlay;
+  }
+}
 
 #pragma mark MPNowPlayingInfoCenter handling
 - (BOOL)canBecomeFirstResponder {

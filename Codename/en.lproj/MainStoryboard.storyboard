@@ -53,6 +53,7 @@
                     <navigationItem key="navigationItem" id="h33-m3-cCp"/>
                     <connections>
                         <outlet property="coverArtView" destination="hgN-tb-FLQ" id="2rb-Rv-bfq"/>
+                        <outlet property="playpauseButton" destination="93s-6k-KNm" id="yPl-8h-7Dm"/>
                         <outlet property="volumeView" destination="sgP-j9-cJ7" id="Kwa-gg-V4h"/>
                     </connections>
                 </viewController>
@@ -177,6 +178,7 @@
             <relationships>
                 <relationship kind="action" name="play:"/>
                 <relationship kind="outlet" name="coverArtView" candidateClass="CoverArtView"/>
+                <relationship kind="outlet" name="playpauseButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="volumeView" candidateClass="MPVolumeView"/>
             </relationships>
         </class>
