@@ -13,6 +13,7 @@
 #import "CoverArtCollectionViewCell.h"
 #import "URLCache.h"
 #import "CachedImage.h"
+#import <MediaPlayer/MPVolumeView.h>
 #import <MediaPlayer/MPNowPlayingInfoCenter.h>
 #import <MediaPlayer/MPMediaItem.h>
 
@@ -29,6 +30,7 @@
 @property (strong, nonatomic)NSManagedObjectContext *managedObjectContext;
 @property (weak, nonatomic) IBOutlet CoverArtView *coverArtView;
 @property (strong, nonatomic) Metadata *metadata;
+@property (weak, nonatomic) IBOutlet MPVolumeView *volumeView;
 @property (nonatomic) BOOL statusPlaying;
 @end
 
