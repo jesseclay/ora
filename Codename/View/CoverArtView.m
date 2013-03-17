@@ -24,22 +24,15 @@
 - (void)setImage:(UIImage *)image
 {
   _image = image;
-  UIImageView *iv = [[UIImageView alloc] initWithImage:image];
-
-  CGFloat ratio = iv.bounds.size.height / iv.bounds.size.width;
-  CGFloat newHeight = ratio * self.frame.size.width;
-  
-  iv.frame = CGRectMake(0, 0, self.frame.size.width, newHeight);
-  [self addSubview:iv];
+  if (image) {
+    UIImageView *iv = [[UIImageView alloc] initWithImage:image];
+    
+    CGFloat ratio = iv.bounds.size.height / iv.bounds.size.width;
+    CGFloat newHeight = ratio * self.frame.size.width;
+    
+    iv.frame = CGRectMake(0, 0, self.frame.size.width, newHeight);
+    [self addSubview:iv];
+  }
 }
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
 
 @end

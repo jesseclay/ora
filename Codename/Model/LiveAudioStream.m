@@ -7,7 +7,19 @@
 //
 
 #import "LiveAudioStream.h"
+#import "LiveAudioStreamURL.h"
 
 @implementation LiveAudioStream
+
++ (LiveAudioStream *)sharedInstance
+{
+  static LiveAudioStream *sharedInstance = nil;
+  if (!sharedInstance) {
+    NSURL *url = [NSURL URLWithString:STREAM_URL];
+    sharedInstance = [[LiveAudioStream alloc] initWithURL:url];
+  }
+  return sharedInstance;
+}
+
 
 @end

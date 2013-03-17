@@ -15,8 +15,7 @@
 + (void)fetchAndUpdateCoreDataMetadata:(void (^)(BOOL))successHandler;
 
 // the latest data stored in CoreData
-+ (Metadata *)nowPlayingDataWithContext:(NSManagedObjectContext *)context;
-
++ (Metadata *)mostRecentMetadataWithContext:(NSManagedObjectContext *)context;
 
 // all the metadata stored in CoreData
 + (NSArray *)metadataWithContext:(NSManagedObjectContext *)context;

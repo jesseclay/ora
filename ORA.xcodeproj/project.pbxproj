@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		D303CA8016D4591900E8EC61 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D303CA7F16D4591900E8EC61 /* AVFoundation.framework */; };
 		D303CA8416D45F0700E8EC61 /* NowPlayingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D303CA8316D45F0700E8EC61 /* NowPlayingViewController.m */; };
+		D3463E3816EDD9D5004FE0D2 /* playbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = D3463E3716EDD9D5004FE0D2 /* playbutton.png */; };
+		D3463E3F16EDE34F004FE0D2 /* HistoryTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D3463E3E16EDE34F004FE0D2 /* HistoryTVC.m */; };
+		D3463E4216EDE368004FE0D2 /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3463E4016EDE368004FE0D2 /* CoreDataTableViewController.m */; };
+		D3463E4516EDEFB0004FE0D2 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3463E4416EDEFAF004FE0D2 /* AudioToolbox.framework */; };
+		D3463E4816EDF497004FE0D2 /* CachedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = D3463E4716EDF497004FE0D2 /* CachedImage.m */; };
+		D3463E4A16EDF7F1004FE0D2 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3463E4916EDF7F0004FE0D2 /* MediaPlayer.framework */; };
+		D39EFB3916F588EE00E39866 /* ora.png in Resources */ = {isa = PBXBuildFile; fileRef = D39EFB3816F588EE00E39866 /* ora.png */; };
 		D3C0D32E16EA955900784C0F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3C0D32D16EA955900784C0F /* CoreData.framework */; };
 		D3C0D33116EA963B00784C0F /* BBCCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C0D32F16EA963B00784C0F /* BBCCoreDataManager.m */; };
 		D3DE4C4016C9C5D400F9D593 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3DE4C3F16C9C5D400F9D593 /* UIKit.framework */; };
@@ -39,6 +46,17 @@
 		D303CA7F16D4591900E8EC61 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D303CA8216D45F0700E8EC61 /* NowPlayingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NowPlayingViewController.h; path = Controller/NowPlayingViewController.h; sourceTree = "<group>"; };
 		D303CA8316D45F0700E8EC61 /* NowPlayingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NowPlayingViewController.m; path = Controller/NowPlayingViewController.m; sourceTree = "<group>"; };
+		D3463E3716EDD9D5004FE0D2 /* playbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = playbutton.png; path = Resources/images/playbutton.png; sourceTree = SOURCE_ROOT; };
+		D3463E3D16EDE34F004FE0D2 /* HistoryTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HistoryTVC.h; path = Controller/HistoryTVC.h; sourceTree = "<group>"; };
+		D3463E3E16EDE34F004FE0D2 /* HistoryTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HistoryTVC.m; path = Controller/HistoryTVC.m; sourceTree = "<group>"; };
+		D3463E4016EDE368004FE0D2 /* CoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataTableViewController.m; path = CoreData/CoreDataTableViewController.m; sourceTree = "<group>"; };
+		D3463E4116EDE368004FE0D2 /* CoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreDataTableViewController.h; path = CoreData/CoreDataTableViewController.h; sourceTree = "<group>"; };
+		D3463E4316EDEEA7004FE0D2 /* LiveAudioStreamURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LiveAudioStreamURL.h; path = Codename/Model/LiveAudioStreamURL.h; sourceTree = "<group>"; };
+		D3463E4416EDEFAF004FE0D2 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		D3463E4616EDF497004FE0D2 /* CachedImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CachedImage.h; path = Model/CachedImage.h; sourceTree = "<group>"; };
+		D3463E4716EDF497004FE0D2 /* CachedImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CachedImage.m; path = Model/CachedImage.m; sourceTree = "<group>"; };
+		D3463E4916EDF7F0004FE0D2 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		D39EFB3816F588EE00E39866 /* ora.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ora.png; sourceTree = "<group>"; };
 		D3C0D32D16EA955900784C0F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		D3C0D32F16EA963B00784C0F /* BBCCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBCCoreDataManager.m; path = CoreData/BBCCoreDataManager.m; sourceTree = "<group>"; };
 		D3C0D33016EA963B00784C0F /* BBCCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBCCoreDataManager.h; path = CoreData/BBCCoreDataManager.h; sourceTree = "<group>"; };
@@ -86,6 +104,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3463E4A16EDF7F1004FE0D2 /* MediaPlayer.framework in Frameworks */,
+				D3463E4516EDEFB0004FE0D2 /* AudioToolbox.framework in Frameworks */,
 				D3C0D32E16EA955900784C0F /* CoreData.framework in Frameworks */,
 				D303CA8016D4591900E8EC61 /* AVFoundation.framework in Frameworks */,
 				D3DE4C4016C9C5D400F9D593 /* UIKit.framework in Frameworks */,
@@ -100,16 +120,29 @@
 		D303CA8116D45ED900E8EC61 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D3463E3D16EDE34F004FE0D2 /* HistoryTVC.h */,
+				D3463E3E16EDE34F004FE0D2 /* HistoryTVC.m */,
 				D303CA8216D45F0700E8EC61 /* NowPlayingViewController.h */,
 				D303CA8316D45F0700E8EC61 /* NowPlayingViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
 		};
+		D3463E3916EDD9E5004FE0D2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D39EFB3816F588EE00E39866 /* ora.png */,
+				D3463E3716EDD9D5004FE0D2 /* playbutton.png */,
+			);
+			name = Resources;
+			path = Codename;
+			sourceTree = "<group>";
+		};
 		D3DE4C3316C9C5D400F9D593 = {
 			isa = PBXGroup;
 			children = (
 				D3DE4C4516C9C5D400F9D593 /* ORA */,
+				D3463E3916EDD9E5004FE0D2 /* Resources */,
 				D3DE4C3E16C9C5D400F9D593 /* Frameworks */,
 				D3DE4C3D16C9C5D400F9D593 /* Products */,
 			);
@@ -126,6 +159,8 @@
 		D3DE4C3E16C9C5D400F9D593 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D3463E4916EDF7F0004FE0D2 /* MediaPlayer.framework */,
+				D3463E4416EDEFAF004FE0D2 /* AudioToolbox.framework */,
 				D3C0D32D16EA955900784C0F /* CoreData.framework */,
 				D303CA7F16D4591900E8EC61 /* AVFoundation.framework */,
 				D3DE4C3F16C9C5D400F9D593 /* UIKit.framework */,
@@ -168,6 +203,8 @@
 		D3DE4C6516C9C66300F9D593 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D3463E4616EDF497004FE0D2 /* CachedImage.h */,
+				D3463E4716EDF497004FE0D2 /* CachedImage.m */,
 				D3FF0B0C16ED697F0006C6E3 /* NetworkActivityIndicator.h */,
 				D3FF0B0D16ED697F0006C6E3 /* NetworkActivityIndicator.m */,
 				D3FF0B0E16ED697F0006C6E3 /* FileStorage.h */,
@@ -176,6 +213,7 @@
 				D3FF0B1116ED697F0006C6E3 /* URLCache.m */,
 				D3F7434116E9EFD6000A2197 /* CSRDSMetadataFetcher.h */,
 				D3F7434216E9EFD6000A2197 /* CSRDSMetadataFetcher.m */,
+				D3463E4316EDEEA7004FE0D2 /* LiveAudioStreamURL.h */,
 				D3DE4C6916C9C9E000F9D593 /* LiveAudioStream.h */,
 				D3DE4C6A16C9C9E000F9D593 /* LiveAudioStream.m */,
 			);
@@ -186,6 +224,8 @@
 		D3F802E416EA91DB00A35F7F /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				D3463E4016EDE368004FE0D2 /* CoreDataTableViewController.m */,
+				D3463E4116EDE368004FE0D2 /* CoreDataTableViewController.h */,
 				D3FA64C716EABE8E00466230 /* Metadata+CSRDS.h */,
 				D3FA64C816EABE8E00466230 /* Metadata+CSRDS.m */,
 				D3FA64CA16EAC7F500466230 /* CSRDSCoreDataConnector.h */,
@@ -268,6 +308,8 @@
 				D3DE4C5416C9C5D400F9D593 /* Default@2x.png in Resources */,
 				D3DE4C5616C9C5D400F9D593 /* Default-568h@2x.png in Resources */,
 				D3DE4C5916C9C5D400F9D593 /* MainStoryboard.storyboard in Resources */,
+				D3463E3816EDD9D5004FE0D2 /* playbutton.png in Resources */,
+				D39EFB3916F588EE00E39866 /* ora.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +336,9 @@
 				D3FF0B1216ED697F0006C6E3 /* NetworkActivityIndicator.m in Sources */,
 				D3FF0B1316ED697F0006C6E3 /* FileStorage.m in Sources */,
 				D3FF0B1416ED697F0006C6E3 /* URLCache.m in Sources */,
+				D3463E3F16EDE34F004FE0D2 /* HistoryTVC.m in Sources */,
+				D3463E4216EDE368004FE0D2 /* CoreDataTableViewController.m in Sources */,
+				D3463E4816EDF497004FE0D2 /* CachedImage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

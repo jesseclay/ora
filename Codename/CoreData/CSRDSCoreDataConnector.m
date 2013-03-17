@@ -35,10 +35,14 @@
   }];
 }
 
-+ (Metadata *)nowPlayingDataWithContext:(NSManagedObjectContext *)context
++ (Metadata *)mostRecentMetadataWithContext:(NSManagedObjectContext *)context
 {
   NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Metadata"];
-  request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"datetime" ascending:YES selector:@selector(compare:)]];
+  
+  /**
+   This sortDescriptor ensures the most recent is returned
+   */
+  request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"datetime" ascending:NO selector:@selector(compare:)]];
   [request setFetchLimit:METADATA_FETCH_LIMIT];
   
   Metadata *metadata = nil;

@@ -12,157 +12,147 @@
 #import "ORACoreDataManager.h"
 #import "CoverArtCollectionViewCell.h"
 #import "URLCache.h"
+#import "CachedImage.h"
+#import <MediaPlayer/MPNowPlayingInfoCenter.h>
+#import <MediaPlayer/MPMediaItem.h>
 
 #define REUSE_IDENTIFIER @"CoverArt"
+#define DEFAULT_COVER_ART_IMAGENAME  @"ora.png" 
 #define COVER_ART_QUEUE   "CoverArtNetworkQueue"
 
 #define NSLOG_NPVC NO
 
 
-@interface NowPlayingViewController () <UICollectionViewDataSource>
+@interface NowPlayingViewController ()
 
 @property (strong, nonatomic)LiveAudioStream *liveAudioStream;
 @property (strong, nonatomic)NSManagedObjectContext *managedObjectContext;
-@property (strong, nonatomic)NSArray *metadataHistory;
-@property (weak, nonatomic) IBOutlet UICollectionView *coverArtCollectionView;
+@property (weak, nonatomic) IBOutlet CoverArtView *coverArtView;
+@property (strong, nonatomic) Metadata *metadata;
+@property (nonatomic) BOOL statusPlaying;
 @end
 
 @implementation NowPlayingViewController
 
-#pragma mark managed object context
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-  self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-  if (self) {
-    // Custom initialization
-  }
-  return self;
-}
 
 #pragma mark Lifecycle
+
+
+- (void)viewDidAppear:(BOOL)animated
+{
+  [super viewDidAppear:animated];
+  [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
+  [self becomeFirstResponder];
+}
+
 
 - (void)viewDidLoad
 {
   [super viewDidLoad];
+  self.statusPlaying = NO;
   [ORACoreDataManager sharedManagedObjectContext:^(NSManagedObjectContext *c) {
     self.managedObjectContext = c;
     [CSRDSCoreDataConnector fetchAndUpdateCoreDataMetadata:^(BOOL success) {
       if (success) {
-        self.metadataHistory = [CSRDSCoreDataConnector metadataWithContext:c];
-        [self syncUI];
+        self.metadata = [CSRDSCoreDataConnector mostRecentMetadataWithContext:c];
       }
     }];
   }];
 }
 
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+	[super viewWillDisappear:animated];
+  //End recieving events
+  [[UIApplication sharedApplication] endReceivingRemoteControlEvents];
+  [self resignFirstResponder];
+}
+
+
+#pragma mark MPNowPlayingInfoCenter handling
+- (BOOL)canBecomeFirstResponder {
+  return YES;
+}
+
+
+- (void)remoteControlReceivedWithEvent:(UIEvent *)event
+{
+  switch (event.subtype) {
+    case UIEventSubtypeRemoteControlTogglePlayPause:
+      [self play:event];
+      break;
+    case UIEventSubtypeRemoteControlPlay:
+      [self play:event];
+      break;
+    case UIEventSubtypeRemoteControlPause:
+      break;
+    case UIEventSubtypeRemoteControlStop:
+      break;
+    default:
+      break;
+  }
+}
+
+
+- (void)setMPNowPlayingInfo:(Metadata *)metadata withImage:(UIImage *)image
+{
+  /**
+   
+   Setup MPNowPlayingInfoCenter Attributes
+   
+   */
+  MPMediaItemArtwork *art;
+  if (image) {
+    art = [[MPMediaItemArtwork alloc] initWithImage:image];
+  }
+  
+  NSDictionary *nowPlayingInfo = @{MPMediaItemPropertyArtist:metadata.artiste,
+                                   MPMediaItemPropertyArtwork:art,
+                                   MPMediaItemPropertyTitle:metadata.title};
+  [[MPNowPlayingInfoCenter defaultCenter] setNowPlayingInfo:nowPlayingInfo];
+}
+
+
 #pragma mark Properties
+
 
 - (LiveAudioStream *)liveAudioStream
 {
   if (!_liveAudioStream) {
-    NSURL *url = [NSURL URLWithString:WEFM_URL];
-    _liveAudioStream = [[LiveAudioStream alloc] initWithURL:url];
+    _liveAudioStream = [LiveAudioStream sharedInstance];
   }
   return _liveAudioStream;
 }
 
+
+- (void)setMetadata:(Metadata *)metadata
+{
+  UIImage *image;
+  
+  if (metadata.artURLStringMedium) {
+    image = [CachedImage imageWithURLString:metadata.artURLStringMedium];
+  } else {
+    image = [UIImage imageNamed:DEFAULT_COVER_ART_IMAGENAME];
+  }
+  
+  self.coverArtView.image = image;
+  [self setMPNowPlayingInfo:metadata withImage:image];
+  _metadata = metadata;
+}
+
+
 #pragma mark Actions
 
+
 - (IBAction)play:(id)sender {
-  [self.liveAudioStream play];
-}
-
-- (IBAction)pause:(id)sender {
-  [self.liveAudioStream pause];
-}
-
-- (void)refresh
-{
-  self.navigationController.title = @"hi";
-}
-
-#pragma mark UI
-
-
-- (void)syncUI
-{
-  [self.coverArtCollectionView reloadData];
-}
-
-#pragma mark Gestures
-
-
-#pragma mark UICollectionView Data Source - Helpers
-
-- (void)setCell:(CoverArtCollectionViewCell *)cell withArtFromMetadata:(Metadata *)metadata
-{
-  NSURL *url = [[NSURL alloc] initWithString:metadata.artURLStringMedium];
-  dispatch_queue_t q = dispatch_queue_create(COVER_ART_QUEUE, NULL);
-  CoverArtView *artView = cell.coverArtView;
-  
-  dispatch_async(q, ^{
-    
-    NSData *data;
-    if ([URLCache contains:url]) {
-      data = [URLCache get:url];
-    } else {
-      data = [[NSData alloc] initWithContentsOfURL:url];
-      [URLCache put:data url:url];
-    }
-    UIImage *image = [[UIImage alloc] initWithData:data];
-    
-    dispatch_async(dispatch_get_main_queue(), ^{
-      artView.image = image;
-    });
-  });
-  
-}
-
-
-#pragma mark UICollectionView Data Source
-
-
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
-                  cellForItemAtIndexPath:(NSIndexPath *)indexPath
-{
-  UICollectionViewCell *cell = [self.coverArtCollectionView
-                                dequeueReusableCellWithReuseIdentifier:REUSE_IDENTIFIER
-                                forIndexPath:indexPath];
-  
-  if ([cell isKindOfClass:[CoverArtCollectionViewCell class]]) {
-    
-    CoverArtCollectionViewCell *artCell = (CoverArtCollectionViewCell *) cell;
-    Metadata *metadata = [self.metadataHistory objectAtIndex:indexPath.item];
-    
-    if (NSLOG_NPVC) {
-      NSLog(@"loading position: %d (%@)", indexPath.item, metadata.artiste);
-    }
-    
-    
-    // get metadata entry
-    
-    [self setCell:artCell withArtFromMetadata:metadata];
+  NSLog(@"%d", self.liveAudioStream.status);
+  if (self.statusPlaying == YES) {
+    [self.liveAudioStream pause];
+  } else {
+    [self.liveAudioStream play];
   }
-  return cell;
-}
-
-
-- (NSInteger)collectionView:(UICollectionView *)collectionView
-     numberOfItemsInSection:(NSInteger)section
-{
-  if (NSLOG_NPVC) {
-    NSLog(@"number of metadatas: %d", [self.metadataHistory count]);
-  }
-  
-  return self.metadataHistory ? [self.metadataHistory count] : 0;
-}
-
-
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
-{
-  return 1;
+  self.statusPlaying = !self.statusPlaying;
 }
 
 
