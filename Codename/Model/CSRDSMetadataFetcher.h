@@ -13,6 +13,7 @@
 #define MD_NOW_ARTISTE          @"csrds_now_artist"
 #define MD_NOW_URL_COVER_MED    @"csrds_now_coverurl_large"
 #define MD_NOW_URL_COVER_LARGE  @"csrds_now_coverurl_medium"
+#define MD_AMZN_URL             @"csrds_url"
 
 #define MD_TYPE_SONG  @"Song"
 #define MD_TYPE_SEGUE @"Segue"

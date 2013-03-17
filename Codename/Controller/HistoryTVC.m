@@ -56,6 +56,16 @@
   NSURL *url = [[NSURL alloc] initWithString:metadata.artURLStringMedium];
   cell.imageView.image = [CachedImage imageWithURL:url];
   
+  /**
+   disable segue if amazon link is not present
+   */
+  if ([metadata.amznUrlString isEqualToString:@""]) {
+    cell.accessoryType = UITableViewCellAccessoryNone;
+    cell.userInteractionEnabled = NO;
+  } else {
+    // TODO set accessory view
+  }
+
   return cell;
 }
 
@@ -91,6 +101,22 @@
   [CSRDSCoreDataConnector fetchAndUpdateCoreDataMetadata:^(BOOL success) {
     [self.refreshControl endRefreshing];
   }];
+}
+
+#pragma mark Segues
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+  NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+  Metadata *metadata = [self.fetchedResultsController objectAtIndexPath:indexPath];
+  
+  if ([segue.destinationViewController respondsToSelector:@selector(setUrl:)]) {
+    NSURL *url = [[NSURL alloc] initWithString:metadata.amznUrlString];
+    [segue.destinationViewController performSelector:@selector(setUrl:)
+                                          withObject:url];
+    [segue.destinationViewController setTitle:metadata.title];
+  }
 }
 
 

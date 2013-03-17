@@ -2,7 +2,7 @@
 //  Metadata.m
 //  ORA
 //
-//  Created by Brian Holder-Chow Lin On on 3/8/13.
+//  Created by Brian Holder-Chow Lin On on 3/17/13.
 //  Copyright (c) 2013 CS193p. All rights reserved.
 //
 
@@ -11,11 +11,12 @@
 
 @implementation Metadata
 
-@dynamic datetime;
-@dynamic type;
-@dynamic title;
 @dynamic artiste;
-@dynamic artURLStringMedium;
 @dynamic artURLStringLarge;
+@dynamic artURLStringMedium;
+@dynamic datetime;
+@dynamic title;
+@dynamic type;
+@dynamic amznUrlString;
 
 @end

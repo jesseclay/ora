@@ -58,6 +58,7 @@
     metadata.datetime = [NSDate date];
     metadata.artURLStringLarge  = csrdsData[MD_NOW_URL_COVER_LARGE];
     metadata.artURLStringMedium = csrdsData[MD_NOW_URL_COVER_MED];
+    metadata.amznUrlString      = csrdsData[MD_AMZN_URL];
     
     
   } else { // found the Metadata, just return it from the list of matches (which there will only be one of)
