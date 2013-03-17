@@ -19,6 +19,7 @@
 		D398018716F5B1BC00E9FFCC /* loadingbutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D398018616F5B1BC00E9FFCC /* loadingbutton@2x.png */; };
 		D398018916F5B33400E9FFCC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D398018816F5B33400E9FFCC /* QuartzCore.framework */; };
 		D398018C16F5B3F200E9FFCC /* PlayPauseButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D398018B16F5B3F200E9FFCC /* PlayPauseButton.m */; };
+		D398019316F5BD8900E9FFCC /* glowbg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D398019216F5BD8900E9FFCC /* glowbg.jpg */; };
 		D39EFB3916F588EE00E39866 /* ora.png in Resources */ = {isa = PBXBuildFile; fileRef = D39EFB3816F588EE00E39866 /* ora.png */; };
 		D39EFB4016F5A80100E39866 /* playbutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D39EFB3F16F5A80100E39866 /* playbutton@2x.png */; };
 		D3C0D32E16EA955900784C0F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3C0D32D16EA955900784C0F /* CoreData.framework */; };
@@ -66,6 +67,7 @@
 		D398018816F5B33400E9FFCC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D398018A16F5B3F200E9FFCC /* PlayPauseButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayPauseButton.h; path = View/PlayPauseButton.h; sourceTree = "<group>"; };
 		D398018B16F5B3F200E9FFCC /* PlayPauseButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayPauseButton.m; path = View/PlayPauseButton.m; sourceTree = "<group>"; };
+		D398019216F5BD8900E9FFCC /* glowbg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = glowbg.jpg; sourceTree = "<group>"; };
 		D39EFB3816F588EE00E39866 /* ora.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ora.png; sourceTree = "<group>"; };
 		D39EFB3F16F5A80100E39866 /* playbutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "playbutton@2x.png"; sourceTree = "<group>"; };
 		D3C0D32D16EA955900784C0F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -143,6 +145,7 @@
 		D3463E3916EDD9E5004FE0D2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D398019216F5BD8900E9FFCC /* glowbg.jpg */,
 				D39EFB3816F588EE00E39866 /* ora.png */,
 				D398018616F5B1BC00E9FFCC /* loadingbutton@2x.png */,
 				D398018416F5B1B300E9FFCC /* pausebutton@2x.png */,
@@ -331,6 +334,7 @@
 				D39EFB4016F5A80100E39866 /* playbutton@2x.png in Resources */,
 				D398018516F5B1B300E9FFCC /* pausebutton@2x.png in Resources */,
 				D398018716F5B1BC00E9FFCC /* loadingbutton@2x.png in Resources */,
+				D398019316F5BD8900E9FFCC /* glowbg.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
