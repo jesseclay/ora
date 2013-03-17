@@ -18,7 +18,7 @@
 #import <MediaPlayer/MPMediaItem.h>
 
 #define REUSE_IDENTIFIER @"CoverArt"
-#define DEFAULT_COVER_ART_IMAGENAME  @"ora.png" 
+#define DEFAULT_COVER_ART_IMAGENAME  @"ora.png"
 #define COVER_ART_QUEUE   "CoverArtNetworkQueue"
 
 #define NSLOG_NPVC NO
