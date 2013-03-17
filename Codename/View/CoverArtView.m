@@ -32,6 +32,7 @@
     
     iv.frame = CGRectMake(0, 0, self.frame.size.width, newHeight);
     [self addSubview:iv];
+
   }
 }
 

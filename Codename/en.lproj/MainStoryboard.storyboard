@@ -117,11 +117,69 @@
                     </tabBar>
                     <connections>
                         <segue destination="sbX-AW-ZHA" kind="relationship" relationship="viewControllers" id="lGM-4d-Hwf"/>
+                        <segue destination="3Tv-nJ-emn" kind="relationship" relationship="viewControllers" id="iAs-iP-CH5"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pSl-vc-cCn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-246" y="1131"/>
+        </scene>
+        <!--Art Collection View Controller-->
+        <scene sceneID="gI4-gh-0eZ">
+            <objects>
+                <collectionViewController autoresizesArchivedViewToFullSize="NO" id="3Tv-nJ-emn" customClass="ArtCollectionViewController" sceneMemberID="viewController">
+                    <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="kfF-Vc-7ap">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ke4-uU-8uX">
+                            <size key="itemSize" width="292" height="287"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" reuseIdentifier="CoverArt" id="9q2-Z6-TWH" customClass="CoverArtCollectionViewCell">
+                                <rect key="frame" x="0.0" y="40" width="292" height="287"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="292" height="287"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="TopLeft" translatesAutoresizingMaskIntoConstraints="NO" id="mhc-y0-6NU" customClass="CoverArtView">
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="mhc-y0-6NU" firstAttribute="bottom" secondItem="9q2-Z6-TWH" secondAttribute="bottom" type="default" id="QfL-yp-Q3N"/>
+                                    <constraint firstItem="mhc-y0-6NU" firstAttribute="leading" secondItem="9q2-Z6-TWH" secondAttribute="leading" type="default" id="cO7-45-9An"/>
+                                    <constraint firstItem="mhc-y0-6NU" firstAttribute="trailing" secondItem="9q2-Z6-TWH" secondAttribute="trailing" type="default" id="mJ7-9c-anG"/>
+                                    <constraint firstItem="mhc-y0-6NU" firstAttribute="top" secondItem="9q2-Z6-TWH" secondAttribute="top" type="default" id="qgu-uV-hJ1"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="coverArtView" destination="mhc-y0-6NU" id="lpD-lV-cJw"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="3Tv-nJ-emn" id="7WS-oA-QDi"/>
+                            <outlet property="delegate" destination="3Tv-nJ-emn" id="4qr-OV-G0N"/>
+                        </connections>
+                    </collectionView>
+                    <tabBarItem key="tabBarItem" systemItem="mostRecent" id="bxF-B9-lLF"/>
+                    <connections>
+                        <outlet property="coverArtCollectionView" destination="kfF-Vc-7ap" id="ThD-G6-STm"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fIi-Rm-1Pr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="nJt-5e-gXd">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="500" y="1726"/>
         </scene>
         <!--HistoryTVC - History-->
         <scene sceneID="g6f-p4-Zs3">
@@ -237,8 +295,20 @@
         <image name="playbutton@2x.png" width="140" height="140"/>
     </resources>
     <classes>
+        <class className="ArtCollectionViewController" superclassName="UICollectionViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ArtCollectionViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="coverArtCollectionView" candidateClass="UICollectionView"/>
+            </relationships>
+        </class>
         <class className="CoreDataTableViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CoreDataTableViewController.h"/>
+        </class>
+        <class className="CoverArtCollectionViewCell" superclassName="UICollectionViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CoverArtCollectionViewCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="coverArtView" candidateClass="CoverArtView"/>
+            </relationships>
         </class>
         <class className="CoverArtView" superclassName="UIView">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CoverArtView.h"/>
@@ -255,6 +325,7 @@
         <class className="NowPlayingViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NowPlayingViewController.h"/>
             <relationships>
+                <relationship kind="action" name="play:"/>
                 <relationship kind="outlet" name="coverArtView" candidateClass="CoverArtView"/>
                 <relationship kind="outlet" name="navArtisteLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="navTitleLabel" candidateClass="UILabel"/>
@@ -264,6 +335,18 @@
         </class>
         <class className="PlayPauseButton" superclassName="UIButton">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PlayPauseButton.h"/>
+        </class>
+        <class className="UICollectionReusableView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionReusableView.h"/>
+        </class>
+        <class className="UICollectionViewCell" superclassName="UICollectionReusableView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewCell.h"/>
+        </class>
+        <class className="UICollectionViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewController.h"/>
+        </class>
+        <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
         </class>
         <class className="UIRefreshControl" superclassName="UIControl">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UIRefreshControl.h"/>

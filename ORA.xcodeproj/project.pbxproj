@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		D303CA8016D4591900E8EC61 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D303CA7F16D4591900E8EC61 /* AVFoundation.framework */; };
 		D303CA8416D45F0700E8EC61 /* NowPlayingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D303CA8316D45F0700E8EC61 /* NowPlayingViewController.m */; };
-		D3463E3816EDD9D5004FE0D2 /* playbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = D3463E3716EDD9D5004FE0D2 /* playbutton.png */; };
 		D3463E3F16EDE34F004FE0D2 /* HistoryTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D3463E3E16EDE34F004FE0D2 /* HistoryTVC.m */; };
 		D3463E4216EDE368004FE0D2 /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3463E4016EDE368004FE0D2 /* CoreDataTableViewController.m */; };
 		D3463E4516EDEFB0004FE0D2 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3463E4416EDEFAF004FE0D2 /* AudioToolbox.framework */; };
@@ -31,6 +30,7 @@
 		D3BB95D416F5E9B800D6D46B /* Metadata.m in Sources */ = {isa = PBXBuildFile; fileRef = D3BB95D316F5E9B800D6D46B /* Metadata.m */; };
 		D3BB95D716F5F87800D6D46B /* UIBuyButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D3BB95D616F5F87800D6D46B /* UIBuyButton.m */; };
 		D3BB95F216F60A0C00D6D46B /* UITableViewCell+AmazonBuyButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D3BB95F116F60A0C00D6D46B /* UITableViewCell+AmazonBuyButton.m */; };
+		D3BB95F516F6157300D6D46B /* ArtCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3BB95F416F6157300D6D46B /* ArtCollectionViewController.m */; };
 		D3C0D32E16EA955900784C0F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3C0D32D16EA955900784C0F /* CoreData.framework */; };
 		D3C0D33116EA963B00784C0F /* BBCCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C0D32F16EA963B00784C0F /* BBCCoreDataManager.m */; };
 		D3DE4C4016C9C5D400F9D593 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3DE4C3F16C9C5D400F9D593 /* UIKit.framework */; };
@@ -59,7 +59,6 @@
 		D303CA7F16D4591900E8EC61 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D303CA8216D45F0700E8EC61 /* NowPlayingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NowPlayingViewController.h; path = Controller/NowPlayingViewController.h; sourceTree = "<group>"; };
 		D303CA8316D45F0700E8EC61 /* NowPlayingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NowPlayingViewController.m; path = Controller/NowPlayingViewController.m; sourceTree = "<group>"; };
-		D3463E3716EDD9D5004FE0D2 /* playbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = playbutton.png; path = Resources/images/playbutton.png; sourceTree = SOURCE_ROOT; };
 		D3463E3D16EDE34F004FE0D2 /* HistoryTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HistoryTVC.h; path = Controller/HistoryTVC.h; sourceTree = "<group>"; };
 		D3463E3E16EDE34F004FE0D2 /* HistoryTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HistoryTVC.m; path = Controller/HistoryTVC.m; sourceTree = "<group>"; };
 		D3463E4016EDE368004FE0D2 /* CoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataTableViewController.m; path = CoreData/CoreDataTableViewController.m; sourceTree = "<group>"; };
@@ -90,6 +89,8 @@
 		D3BB95D616F5F87800D6D46B /* UIBuyButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIBuyButton.m; path = View/UIBuyButton.m; sourceTree = "<group>"; };
 		D3BB95F016F60A0C00D6D46B /* UITableViewCell+AmazonBuyButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITableViewCell+AmazonBuyButton.h"; path = "View/UITableViewCell+AmazonBuyButton.h"; sourceTree = "<group>"; };
 		D3BB95F116F60A0C00D6D46B /* UITableViewCell+AmazonBuyButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITableViewCell+AmazonBuyButton.m"; path = "View/UITableViewCell+AmazonBuyButton.m"; sourceTree = "<group>"; };
+		D3BB95F316F6157300D6D46B /* ArtCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArtCollectionViewController.h; path = Controller/ArtCollectionViewController.h; sourceTree = "<group>"; };
+		D3BB95F416F6157300D6D46B /* ArtCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ArtCollectionViewController.m; path = Controller/ArtCollectionViewController.m; sourceTree = "<group>"; };
 		D3C0D32D16EA955900784C0F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		D3C0D32F16EA963B00784C0F /* BBCCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBCCoreDataManager.m; path = CoreData/BBCCoreDataManager.m; sourceTree = "<group>"; };
 		D3C0D33016EA963B00784C0F /* BBCCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBCCoreDataManager.h; path = CoreData/BBCCoreDataManager.h; sourceTree = "<group>"; };
@@ -152,6 +153,8 @@
 		D303CA8116D45ED900E8EC61 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D3BB95F316F6157300D6D46B /* ArtCollectionViewController.h */,
+				D3BB95F416F6157300D6D46B /* ArtCollectionViewController.m */,
 				D3BB95CF16F5E45D00D6D46B /* WebViewController.h */,
 				D3BB95D016F5E45D00D6D46B /* WebViewController.m */,
 				D3463E3D16EDE34F004FE0D2 /* HistoryTVC.h */,
@@ -175,7 +178,6 @@
 				D398018616F5B1BC00E9FFCC /* loadingbutton@2x.png */,
 				D398018416F5B1B300E9FFCC /* pausebutton@2x.png */,
 				D39EFB3F16F5A80100E39866 /* playbutton@2x.png */,
-				D3463E3716EDD9D5004FE0D2 /* playbutton.png */,
 			);
 			name = Resources;
 			path = Codename;
@@ -357,7 +359,6 @@
 				D3DE4C5216C9C5D400F9D593 /* Default.png in Resources */,
 				D3DE4C5416C9C5D400F9D593 /* Default@2x.png in Resources */,
 				D3DE4C5916C9C5D400F9D593 /* MainStoryboard.storyboard in Resources */,
-				D3463E3816EDD9D5004FE0D2 /* playbutton.png in Resources */,
 				D39EFB3916F588EE00E39866 /* ora.png in Resources */,
 				D39EFB4016F5A80100E39866 /* playbutton@2x.png in Resources */,
 				D398018516F5B1B300E9FFCC /* pausebutton@2x.png in Resources */,
@@ -401,6 +402,7 @@
 				D3BB95D416F5E9B800D6D46B /* Metadata.m in Sources */,
 				D3BB95D716F5F87800D6D46B /* UIBuyButton.m in Sources */,
 				D3BB95F216F60A0C00D6D46B /* UITableViewCell+AmazonBuyButton.m in Sources */,
+				D3BB95F516F6157300D6D46B /* ArtCollectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
