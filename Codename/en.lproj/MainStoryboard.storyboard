@@ -12,7 +12,7 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="glowbg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="4iY-yR-IpR"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" image="Default-568h@2x.png" translatesAutoresizingMaskIntoConstraints="NO" id="4iY-yR-IpR"/>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hgN-tb-FLQ" customClass="CoverArtView">
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
@@ -40,11 +40,11 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="4iY-yR-IpR" firstAttribute="top" secondItem="abN-eU-i6l" secondAttribute="top" type="default" id="0lk-HB-7r7"/>
-                            <constraint firstItem="4iY-yR-IpR" firstAttribute="trailing" secondItem="abN-eU-i6l" secondAttribute="trailing" type="default" id="3X1-EF-gHV"/>
                             <constraint firstItem="4iY-yR-IpR" firstAttribute="bottom" secondItem="abN-eU-i6l" secondAttribute="bottom" type="default" id="9WM-yz-LjD"/>
                             <constraint firstItem="sgP-j9-cJ7" firstAttribute="bottom" secondItem="abN-eU-i6l" secondAttribute="bottom" type="default" id="Bdp-YQ-bxk"/>
                             <constraint firstItem="sgP-j9-cJ7" firstAttribute="top" secondItem="abN-eU-i6l" secondAttribute="top" constant="367" id="ERi-uF-ipr"/>
                             <constraint firstItem="4iY-yR-IpR" firstAttribute="leading" secondItem="abN-eU-i6l" secondAttribute="leading" type="default" id="F3C-2V-6ub"/>
+                            <constraint firstItem="4iY-yR-IpR" firstAttribute="trailing" secondItem="abN-eU-i6l" secondAttribute="trailing" type="default" id="I2N-Cd-YbV"/>
                             <constraint firstAttribute="trailing" secondItem="sgP-j9-cJ7" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Jgc-o5-a4L"/>
                             <constraint firstItem="sgP-j9-cJ7" firstAttribute="top" secondItem="93s-6k-KNm" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="LIb-IG-qi8"/>
                             <constraint firstItem="hgN-tb-FLQ" firstAttribute="top" secondItem="abN-eU-i6l" secondAttribute="top" constant="20" symbolic="YES" type="default" id="QsY-Oj-Sfl"/>
@@ -103,6 +103,7 @@
                 <tabBarController definesPresentationContext="YES" id="LLD-gM-0dm" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="kxf-Wj-8EL">
                         <barButtonItem key="rightBarButtonItem" title="Now Playing" id="ddj-Io-5OY">
+                            <color key="tintColor" red="0.11951920972545355" green="0.68506819009780884" blue="0.068681720457444279" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="2" kind="push" id="Hgi-17-fZ1"/>
                             </connections>
@@ -191,7 +192,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="glowbg.jpg" width="1920" height="1358"/>
+        <image name="Default-568h@2x.png" width="640" height="1136"/>
         <image name="playbutton@2x.png" width="140" height="140"/>
     </resources>
     <classes>

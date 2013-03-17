@@ -129,14 +129,18 @@
    Setup MPNowPlayingInfoCenter Attributes
    
    */
-  MPMediaItemArtwork *art;
+
+  NSDictionary *nowPlayingInfo;
   if (image) {
-    art = [[MPMediaItemArtwork alloc] initWithImage:image];
+    MPMediaItemArtwork *art = [[MPMediaItemArtwork alloc] initWithImage:image];
+    nowPlayingInfo = @{MPMediaItemPropertyArtist:metadata.artiste,
+                       MPMediaItemPropertyArtwork:art,
+                       MPMediaItemPropertyTitle:metadata.title};
+  } else {
+    nowPlayingInfo = @{MPMediaItemPropertyArtist:metadata.artiste,
+                       MPMediaItemPropertyTitle:metadata.title};
   }
   
-  NSDictionary *nowPlayingInfo = @{MPMediaItemPropertyArtist:metadata.artiste,
-                                   MPMediaItemPropertyArtwork:art,
-                                   MPMediaItemPropertyTitle:metadata.title};
   [[MPNowPlayingInfoCenter defaultCenter] setNowPlayingInfo:nowPlayingInfo];
 }
 

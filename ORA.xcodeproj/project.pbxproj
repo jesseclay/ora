@@ -20,6 +20,11 @@
 		D398018916F5B33400E9FFCC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D398018816F5B33400E9FFCC /* QuartzCore.framework */; };
 		D398018C16F5B3F200E9FFCC /* PlayPauseButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D398018B16F5B3F200E9FFCC /* PlayPauseButton.m */; };
 		D398019316F5BD8900E9FFCC /* glowbg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D398019216F5BD8900E9FFCC /* glowbg.jpg */; };
+		D398019C16F5DB8F00E9FFCC /* ora-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = D398019B16F5DB8F00E9FFCC /* ora-logo.png */; };
+		D398019E16F5DBD000E9FFCC /* ora-logo-std.png in Resources */ = {isa = PBXBuildFile; fileRef = D398019D16F5DBD000E9FFCC /* ora-logo-std.png */; };
+		D39801A216F5DCD800E9FFCC /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D39801A116F5DCD800E9FFCC /* Default.png */; };
+		D39801A416F5DD2400E9FFCC /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D39801A316F5DD2400E9FFCC /* Default@2x.png */; };
+		D39801A516F5DEB300E9FFCC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D398019F16F5DBD800E9FFCC /* Default-568h@2x.png */; };
 		D39EFB3916F588EE00E39866 /* ora.png in Resources */ = {isa = PBXBuildFile; fileRef = D39EFB3816F588EE00E39866 /* ora.png */; };
 		D39EFB4016F5A80100E39866 /* playbutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D39EFB3F16F5A80100E39866 /* playbutton@2x.png */; };
 		D3C0D32E16EA955900784C0F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3C0D32D16EA955900784C0F /* CoreData.framework */; };
@@ -32,7 +37,6 @@
 		D3DE4C5016C9C5D400F9D593 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DE4C4F16C9C5D400F9D593 /* AppDelegate.m */; };
 		D3DE4C5216C9C5D400F9D593 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D3DE4C5116C9C5D400F9D593 /* Default.png */; };
 		D3DE4C5416C9C5D400F9D593 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3DE4C5316C9C5D400F9D593 /* Default@2x.png */; };
-		D3DE4C5616C9C5D400F9D593 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3DE4C5516C9C5D400F9D593 /* Default-568h@2x.png */; };
 		D3DE4C5916C9C5D400F9D593 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3DE4C5716C9C5D400F9D593 /* MainStoryboard.storyboard */; };
 		D3DE4C6B16C9C9E000F9D593 /* LiveAudioStream.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DE4C6A16C9C9E000F9D593 /* LiveAudioStream.m */; };
 		D3F7434316E9EFD6000A2197 /* CSRDSMetadataFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F7434216E9EFD6000A2197 /* CSRDSMetadataFetcher.m */; };
@@ -68,6 +72,11 @@
 		D398018A16F5B3F200E9FFCC /* PlayPauseButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayPauseButton.h; path = View/PlayPauseButton.h; sourceTree = "<group>"; };
 		D398018B16F5B3F200E9FFCC /* PlayPauseButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayPauseButton.m; path = View/PlayPauseButton.m; sourceTree = "<group>"; };
 		D398019216F5BD8900E9FFCC /* glowbg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = glowbg.jpg; sourceTree = "<group>"; };
+		D398019B16F5DB8F00E9FFCC /* ora-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ora-logo.png"; path = "../ora-logo.png"; sourceTree = "<group>"; };
+		D398019D16F5DBD000E9FFCC /* ora-logo-std.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ora-logo-std.png"; path = "../ora-logo-std.png"; sourceTree = "<group>"; };
+		D398019F16F5DBD800E9FFCC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		D39801A116F5DCD800E9FFCC /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		D39801A316F5DD2400E9FFCC /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		D39EFB3816F588EE00E39866 /* ora.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ora.png; sourceTree = "<group>"; };
 		D39EFB3F16F5A80100E39866 /* playbutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "playbutton@2x.png"; sourceTree = "<group>"; };
 		D3C0D32D16EA955900784C0F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -145,6 +154,11 @@
 		D3463E3916EDD9E5004FE0D2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D39801A316F5DD2400E9FFCC /* Default@2x.png */,
+				D39801A116F5DCD800E9FFCC /* Default.png */,
+				D398019F16F5DBD800E9FFCC /* Default-568h@2x.png */,
+				D398019D16F5DBD000E9FFCC /* ora-logo-std.png */,
+				D398019B16F5DB8F00E9FFCC /* ora-logo.png */,
 				D398019216F5BD8900E9FFCC /* glowbg.jpg */,
 				D39EFB3816F588EE00E39866 /* ora.png */,
 				D398018616F5B1BC00E9FFCC /* loadingbutton@2x.png */,
@@ -327,7 +341,6 @@
 				D3DE4C4A16C9C5D400F9D593 /* InfoPlist.strings in Resources */,
 				D3DE4C5216C9C5D400F9D593 /* Default.png in Resources */,
 				D3DE4C5416C9C5D400F9D593 /* Default@2x.png in Resources */,
-				D3DE4C5616C9C5D400F9D593 /* Default-568h@2x.png in Resources */,
 				D3DE4C5916C9C5D400F9D593 /* MainStoryboard.storyboard in Resources */,
 				D3463E3816EDD9D5004FE0D2 /* playbutton.png in Resources */,
 				D39EFB3916F588EE00E39866 /* ora.png in Resources */,
@@ -335,6 +348,11 @@
 				D398018516F5B1B300E9FFCC /* pausebutton@2x.png in Resources */,
 				D398018716F5B1BC00E9FFCC /* loadingbutton@2x.png in Resources */,
 				D398019316F5BD8900E9FFCC /* glowbg.jpg in Resources */,
+				D398019C16F5DB8F00E9FFCC /* ora-logo.png in Resources */,
+				D398019E16F5DBD000E9FFCC /* ora-logo-std.png in Resources */,
+				D39801A216F5DCD800E9FFCC /* Default.png in Resources */,
+				D39801A416F5DD2400E9FFCC /* Default@2x.png in Resources */,
+				D39801A516F5DEB300E9FFCC /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
