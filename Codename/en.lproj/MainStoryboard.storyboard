@@ -97,11 +97,11 @@
             </objects>
             <point key="canvasLocation" x="789" y="550"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar Controller - ORA-->
         <scene sceneID="P9I-bE-ZR7">
             <objects>
                 <tabBarController definesPresentationContext="YES" id="LLD-gM-0dm" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="kxf-Wj-8EL">
+                    <navigationItem key="navigationItem" title="ORA" id="kxf-Wj-8EL">
                         <barButtonItem key="rightBarButtonItem" title="Now Playing" id="ddj-Io-5OY">
                             <color key="tintColor" red="0.11951920972545355" green="0.68506819009780884" blue="0.068681720457444279" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
@@ -173,11 +173,6 @@
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fIi-Rm-1Pr" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <view contentMode="scaleToFill" id="nJt-5e-gXd">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                </view>
             </objects>
             <point key="canvasLocation" x="500" y="1726"/>
         </scene>
