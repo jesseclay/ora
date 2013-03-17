@@ -146,14 +146,19 @@
 {
   UIImage *image;
   
-  if (metadata.artURLStringMedium) {
-    image = [CachedImage imageWithURLString:metadata.artURLStringMedium];
+  if (metadata) {
+    if (metadata.artURLStringMedium) {
+      image = [CachedImage imageWithURLString:metadata.artURLStringMedium];
+    } else {
+      image = [UIImage imageNamed:DEFAULT_COVER_ART_IMAGENAME];
+    }
+    self.coverArtView.image = image;
+    [self setMPNowPlayingInfo:metadata withImage:image];
   } else {
     image = [UIImage imageNamed:DEFAULT_COVER_ART_IMAGENAME];
+    self.coverArtView.image = image;
   }
   
-  self.coverArtView.image = image;
-  [self setMPNowPlayingInfo:metadata withImage:image];
   _metadata = metadata;
 }
 
