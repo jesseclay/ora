@@ -66,6 +66,7 @@
   self.statusPlaying = NO;
   [ORACoreDataManager sharedManagedObjectContext:^(NSManagedObjectContext *c) {
     self.managedObjectContext = c;
+    self.metadata = [CSRDSCoreDataConnector mostRecentMetadataWithContext:c];
     [CSRDSCoreDataConnector fetchAndUpdateCoreDataMetadata:^(BOOL success) {
       if (success) {
         self.metadata = [CSRDSCoreDataConnector mostRecentMetadataWithContext:c];
