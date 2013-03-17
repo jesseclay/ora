@@ -33,6 +33,8 @@
 @property (weak, nonatomic) IBOutlet MPVolumeView *volumeView;
 @property (nonatomic) BOOL statusPlaying;
 @property (weak, nonatomic) IBOutlet PlayPauseButton *playpauseButton;
+@property (weak, nonatomic) IBOutlet UILabel *navTitleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *navArtisteLabel;
 @end
 
 @implementation NowPlayingViewController
@@ -46,6 +48,14 @@
   [super viewDidAppear:animated];
   [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
   [self becomeFirstResponder];
+  [ORACoreDataManager sharedManagedObjectContext:^(NSManagedObjectContext *c) {
+    self.managedObjectContext = c;
+    [CSRDSCoreDataConnector fetchAndUpdateCoreDataMetadata:^(BOOL success) {
+      if (success) {
+        self.metadata = [CSRDSCoreDataConnector mostRecentMetadataWithContext:c];
+      }
+    }];
+  }];
 }
 
 
@@ -152,7 +162,10 @@
     } else {
       image = [UIImage imageNamed:DEFAULT_COVER_ART_IMAGENAME];
     }
-    self.coverArtView.image = image;
+    self.coverArtView.image   = image;
+    self.navArtisteLabel.text = metadata.artiste;
+    self.navTitleLabel.text   = metadata.title;
+    
     [self setMPNowPlayingInfo:metadata withImage:image];
   } else {
     image = [UIImage imageNamed:DEFAULT_COVER_ART_IMAGENAME];
@@ -173,6 +186,7 @@
   } else {
     [self.playpauseButton spin];
     [self.liveAudioStream play:^(BOOL success) {
+      self.metadata = [CSRDSCoreDataConnector mostRecentMetadataWithContext:self.managedObjectContext];
       [self.playpauseButton displayPauseImage];
     }];
   }

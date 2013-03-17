@@ -55,9 +55,40 @@
                             <constraint firstItem="93s-6k-KNm" firstAttribute="top" secondItem="hgN-tb-FLQ" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="jiF-wp-CDR"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="h33-m3-cCp"/>
+                    <navigationItem key="navigationItem" id="h33-m3-cCp">
+                        <nil key="title"/>
+                        <view key="titleView" contentMode="scaleToFill" id="cGO-gj-1Jz">
+                            <rect key="frame" x="96" y="6" width="128" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FDC-b3-mPi">
+                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQn-De-aW7">
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="zQn-De-aW7" firstAttribute="trailing" secondItem="cGO-gj-1Jz" secondAttribute="trailing" type="default" id="1uP-Uc-Lqq"/>
+                                <constraint firstItem="FDC-b3-mPi" firstAttribute="trailing" secondItem="cGO-gj-1Jz" secondAttribute="trailing" type="default" id="75a-bF-BuE"/>
+                                <constraint firstItem="FDC-b3-mPi" firstAttribute="leading" secondItem="cGO-gj-1Jz" secondAttribute="leading" type="default" id="Nq6-FF-eO3"/>
+                                <constraint firstAttribute="bottom" secondItem="FDC-b3-mPi" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="XuL-23-xB7"/>
+                                <constraint firstItem="FDC-b3-mPi" firstAttribute="top" secondItem="cGO-gj-1Jz" secondAttribute="top" type="default" id="Ys2-sK-nVN"/>
+                                <constraint firstItem="zQn-De-aW7" firstAttribute="bottom" secondItem="cGO-gj-1Jz" secondAttribute="bottom" type="default" id="eq9-12-VfX"/>
+                                <constraint firstItem="zQn-De-aW7" firstAttribute="top" secondItem="cGO-gj-1Jz" secondAttribute="top" constant="20" symbolic="YES" type="default" id="pRF-pT-Uzj"/>
+                                <constraint firstItem="zQn-De-aW7" firstAttribute="leading" secondItem="cGO-gj-1Jz" secondAttribute="leading" type="default" id="qoP-aw-Bxe"/>
+                            </constraints>
+                        </view>
+                    </navigationItem>
                     <connections>
                         <outlet property="coverArtView" destination="hgN-tb-FLQ" id="2rb-Rv-bfq"/>
+                        <outlet property="navArtisteLabel" destination="FDC-b3-mPi" id="kOr-GJ-k7r"/>
+                        <outlet property="navTitleLabel" destination="zQn-De-aW7" id="DgY-yd-G6e"/>
                         <outlet property="playpauseButton" destination="93s-6k-KNm" id="yPl-8h-7Dm"/>
                         <outlet property="volumeView" destination="sgP-j9-cJ7" id="Kwa-gg-V4h"/>
                     </connections>
@@ -184,6 +215,8 @@
             <relationships>
                 <relationship kind="action" name="play:"/>
                 <relationship kind="outlet" name="coverArtView" candidateClass="CoverArtView"/>
+                <relationship kind="outlet" name="navArtisteLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="navTitleLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="playpauseButton" candidateClass="PlayPauseButton"/>
                 <relationship kind="outlet" name="volumeView" candidateClass="MPVolumeView"/>
             </relationships>
