@@ -188,17 +188,23 @@
                                     <outlet property="delegate" destination="rJG-N9-ohT" id="YwT-vP-O5W"/>
                                 </connections>
                             </webView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="aDp-jN-0iQ">
+                                <color key="color" red="0.23529413339999999" green="0.58039218189999997" blue="0.7254902124" alpha="1" colorSpace="deviceRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="GVt-sa-P0a" firstAttribute="bottom" secondItem="scY-yH-XGM" secondAttribute="bottom" type="default" id="KID-jE-Ol5"/>
+                            <constraint firstItem="aDp-jN-0iQ" firstAttribute="centerX" secondItem="GVt-sa-P0a" secondAttribute="centerX" type="default" id="S9O-3I-yIe"/>
                             <constraint firstItem="GVt-sa-P0a" firstAttribute="leading" secondItem="scY-yH-XGM" secondAttribute="leading" type="default" id="VgB-62-exL"/>
+                            <constraint firstItem="aDp-jN-0iQ" firstAttribute="top" secondItem="scY-yH-XGM" secondAttribute="top" constant="174" id="eWo-8L-AFx"/>
                             <constraint firstItem="GVt-sa-P0a" firstAttribute="trailing" secondItem="scY-yH-XGM" secondAttribute="trailing" type="default" id="nja-pz-wOy"/>
                             <constraint firstItem="GVt-sa-P0a" firstAttribute="top" secondItem="scY-yH-XGM" secondAttribute="top" type="default" id="o2g-H5-7Zk"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Fe4-lu-1EH"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="aDp-jN-0iQ" id="4yb-dT-i35"/>
                         <outlet property="webView" destination="GVt-sa-P0a" id="uFk-Os-AfI"/>
                     </connections>
                 </viewController>
@@ -249,7 +255,6 @@
         <class className="NowPlayingViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NowPlayingViewController.h"/>
             <relationships>
-                <relationship kind="action" name="play:"/>
                 <relationship kind="outlet" name="coverArtView" candidateClass="CoverArtView"/>
                 <relationship kind="outlet" name="navArtisteLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="navTitleLabel" candidateClass="UILabel"/>
@@ -266,6 +271,7 @@
         <class className="WebViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/WebViewController.h"/>
             <relationships>
+                <relationship kind="outlet" name="activityIndicator" candidateClass="UIActivityIndicatorView"/>
                 <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
             </relationships>
         </class>

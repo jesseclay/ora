@@ -10,6 +10,7 @@
 #import "WebViewController.h"
 
 @interface WebViewController () <UIWebViewDelegate>
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 @end
 
@@ -38,12 +39,14 @@
 - (void)webViewDidStartLoad:(UIWebView *)webView
 {
   [NetworkActivityIndicator show];
+  [self.activityIndicator startAnimating];
 }
 
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
   [NetworkActivityIndicator hide];
+  [self.activityIndicator stopAnimating];
 }
 
 
