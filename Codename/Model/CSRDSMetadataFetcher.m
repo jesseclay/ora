@@ -7,6 +7,7 @@
 //
 
 #import "CSRDSMetadataFetcher.h"
+#import "NetworkActivityIndicator.h"
 
 #define ENDPOINT_URL_STRING @"http://star947tt.com/sites/all/modules/csrds/csrds_now_playing.php"
 
@@ -25,9 +26,12 @@
 #pragma mark private
 + (NSData *)jsonData
 {
+  [NetworkActivityIndicator show];
+
   NSData *jsonData = [[NSString stringWithContentsOfURL:[NSURL URLWithString:ENDPOINT_URL_STRING]
                                                encoding:NSUTF8StringEncoding error:nil]
                       dataUsingEncoding:NSUTF8StringEncoding];
+  [NetworkActivityIndicator hide];
   return jsonData;
 }
 @end
