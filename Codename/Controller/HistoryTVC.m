@@ -11,6 +11,8 @@
 #import "Metadata.h"
 #import "CSRDSCoreDataConnector.h"
 #import "CachedImage.h"
+#import "UIBuyButton.h"
+#import "UITableViewCell+AmazonBuyButton.h"
 
 #define TITLE     @"History"
 #define REUSE_ID  @"HistoryItemCell"
@@ -60,10 +62,9 @@
    disable segue if amazon link is not present
    */
   if ([metadata.amznUrlString isEqualToString:@""]) {
-    cell.accessoryType = UITableViewCellAccessoryNone;
-    cell.userInteractionEnabled = NO;
+    [cell showBuyButton:NO];
   } else {
-    // TODO set accessory view
+    [cell showBuyButton:YES];
   }
 
   return cell;
