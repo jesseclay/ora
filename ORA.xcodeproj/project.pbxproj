@@ -39,8 +39,6 @@
 		D3DE4C4A16C9C5D400F9D593 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D3DE4C4816C9C5D400F9D593 /* InfoPlist.strings */; };
 		D3DE4C4C16C9C5D400F9D593 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DE4C4B16C9C5D400F9D593 /* main.m */; };
 		D3DE4C5016C9C5D400F9D593 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DE4C4F16C9C5D400F9D593 /* AppDelegate.m */; };
-		D3DE4C5216C9C5D400F9D593 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D3DE4C5116C9C5D400F9D593 /* Default.png */; };
-		D3DE4C5416C9C5D400F9D593 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3DE4C5316C9C5D400F9D593 /* Default@2x.png */; };
 		D3DE4C5916C9C5D400F9D593 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3DE4C5716C9C5D400F9D593 /* MainStoryboard.storyboard */; };
 		D3DE4C6B16C9C9E000F9D593 /* LiveAudioStream.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DE4C6A16C9C9E000F9D593 /* LiveAudioStream.m */; };
 		D3F7434316E9EFD6000A2197 /* CSRDSMetadataFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F7434216E9EFD6000A2197 /* CSRDSMetadataFetcher.m */; };
@@ -356,8 +354,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3DE4C4A16C9C5D400F9D593 /* InfoPlist.strings in Resources */,
-				D3DE4C5216C9C5D400F9D593 /* Default.png in Resources */,
-				D3DE4C5416C9C5D400F9D593 /* Default@2x.png in Resources */,
 				D3DE4C5916C9C5D400F9D593 /* MainStoryboard.storyboard in Resources */,
 				D39EFB3916F588EE00E39866 /* ora.png in Resources */,
 				D39EFB4016F5A80100E39866 /* playbutton@2x.png in Resources */,
