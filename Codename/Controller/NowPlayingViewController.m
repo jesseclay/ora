@@ -31,7 +31,6 @@
 @property (weak, nonatomic) IBOutlet CoverArtView *coverArtView;
 @property (strong, nonatomic) Metadata *metadata;
 @property (weak, nonatomic) IBOutlet MPVolumeView *volumeView;
-@property (nonatomic) BOOL statusPlaying;
 @property (weak, nonatomic) IBOutlet PlayPauseButton *playpauseButton;
 @property (weak, nonatomic) IBOutlet UILabel *navTitleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *navArtisteLabel;
@@ -43,27 +42,21 @@
 #pragma mark Lifecycle
 
 
-- (void)viewDidAppear:(BOOL)animated
+- (void)viewWillAppear:(BOOL)animated
 {
-  [super viewDidAppear:animated];
+  [super viewWillAppear:animated];
+  if (self.liveAudioStream.isPlaying) {
+    [self.playpauseButton displayPauseImage];
+  }
   [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
   [self becomeFirstResponder];
-  [ORACoreDataManager sharedManagedObjectContext:^(NSManagedObjectContext *c) {
-    self.managedObjectContext = c;
-    [CSRDSCoreDataConnector fetchAndUpdateCoreDataMetadata:^(BOOL success) {
-      if (success) {
-        self.metadata = [CSRDSCoreDataConnector mostRecentMetadataWithContext:c];
-      }
-    }];
-  }];
 }
 
 
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-  [self.liveAudioStream addObserver:self forKeyPath:@"status" options:0 context:nil];
-  self.statusPlaying = NO;
+  
   [ORACoreDataManager sharedManagedObjectContext:^(NSManagedObjectContext *c) {
     self.managedObjectContext = c;
     self.metadata = [CSRDSCoreDataConnector mostRecentMetadataWithContext:c];
@@ -84,18 +77,6 @@
   [self resignFirstResponder];
 }
 
-
-#pragma mark KVO
-
-- (void)observeValueForKeyPath:(NSString *)keyPath
-                      ofObject:(id)object
-                        change:(NSDictionary *)change
-                       context:(void *)context
-{
-  if (object == self.liveAudioStream && [keyPath isEqualToString:@"status"]) {
-    self.playpauseButton.enabled = self.liveAudioStream.status == AVPlayerStatusReadyToPlay;
-  }
-}
 
 #pragma mark MPNowPlayingInfoCenter handling
 - (BOOL)canBecomeFirstResponder {
@@ -129,7 +110,7 @@
    Setup MPNowPlayingInfoCenter Attributes
    
    */
-
+  
   NSDictionary *nowPlayingInfo;
   if (image) {
     MPMediaItemArtwork *art = [[MPMediaItemArtwork alloc] initWithImage:image];
@@ -185,17 +166,14 @@
 
 
 - (IBAction)play:(id)sender {
-  if (self.statusPlaying == YES) {
+  if (self.liveAudioStream.isPlaying) {
     [self.liveAudioStream pause];
     [self.playpauseButton displayPlayImage];
   } else {
     [self.playpauseButton spin];
-    [self.liveAudioStream play:^(BOOL success) {
-      self.metadata = [CSRDSCoreDataConnector mostRecentMetadataWithContext:self.managedObjectContext];
-      [self.playpauseButton displayPauseImage];
-    }];
+    [self.liveAudioStream play];
+    [self.playpauseButton displayPauseImage];
   }
-  self.statusPlaying = !self.statusPlaying;
 }
 
 

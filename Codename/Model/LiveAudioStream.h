@@ -13,6 +13,7 @@
 @interface LiveAudioStream : AVPlayer
 
 + (LiveAudioStream *)sharedInstance;
+@property (nonatomic, readonly) BOOL isPlaying;
 
 - (void)play:(void (^)(BOOL))successHandler;
 

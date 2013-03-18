@@ -9,6 +9,10 @@
 #import "LiveAudioStream.h"
 #import "LiveAudioStreamURL.h"
 
+@interface LiveAudioStream ()
+@property (nonatomic, readwrite) BOOL isPlaying;
+@end
+
 @implementation LiveAudioStream
 
 + (LiveAudioStream *)sharedInstance
@@ -28,11 +32,34 @@
   
   dispatch_async(q, ^{
     [super play];
+    self.isPlaying = YES;
     dispatch_async(dispatch_get_main_queue(), ^{
       successHandler(YES);
     });
   });
 }
 
+- (void)pause
+{
+  @synchronized(self) {
+    [super pause];
+    self.isPlaying = NO;
+  }
+}
+
+- (BOOL)isPlaying
+{
+  @synchronized(self) {
+    return _isPlaying;
+  }
+}
+
+- (void)play
+{
+  @synchronized(self) {
+    [super play];
+    self.isPlaying = YES;
+  }
+}
 
 @end
