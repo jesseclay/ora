@@ -1,5 +1,7 @@
 ORA is an online radio application for iOS
 
+![ORA](https://photos-4.dropbox.com/t/0/AABmRJ1akhPz4DkMapr1yz-QOrFqtXV7pQTgqSHDfJxQzA/12/12091994/png/2048x1536/3/1375556400/0/2/ora.png/IuVOafMlKiBZ1wKfdN3UBbpY5AejHQZUw-trSYwKc8g)
+
 Users can listen to a live radio stream and view the title, artiste, and cover art for the currently playing track. A list of all previously played tracks is saved and displayed in a table. Users can visit this list and buy songs from Amazon mp3.
 
 # The Live Stream
