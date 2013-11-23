@@ -60,6 +60,6 @@ UIBuyButton is a handcrafted, custom UIButton integrated with ORA as a category 
 
 When users click on previously played tracks in the HistoryTVC, ORA presents a UIWebView where they can listen to the a preview or purchase the song from Amazon mp3.
 
-# Covert Art Gallery
+# Cover Art Gallery
 
 Users can flip through cover art presented in a UICollectionView.
